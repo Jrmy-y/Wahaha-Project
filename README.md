@@ -13,3 +13,10 @@ Perquisite knowledges required for this course is basic high school mathematical
 | Gracia Winnie Susanto | 黄婉婷 | Video Lead |
 | Felicia Lusijanto  | 李瑞霞 | Content Lead |
 | Jeremy Lee | 温余愿 | Coordinator | 
+
+
+##Chapters
+- Algorithm
+  - Asymptotatic Notation
+- Data Structure
+- Connectionist AI
