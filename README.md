@@ -1,6 +1,8 @@
 # Wahaha-Project
 This group aims to create a learning source for topics in Algorithm, Data Structure, and Connectionist AI. 
-Perquisite knowledges required for this course is basic high school mathematical skills.  
+Perquisite knowledges required for this course is basic high school mathematical skills.  We use AI to research the topics we need to cover with the addition of fact checking with source that the AI sourced from.
+
+
 
 ## Team Members
 | English Name | Chinese Name | Role|
