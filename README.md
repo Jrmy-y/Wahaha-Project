@@ -17,6 +17,14 @@ Perquisite knowledges required for this course is basic high school mathematical
 
 ##Chapters
 - Algorithm
-  - Asymptotatic Notation
+  - Foundation of Algorithmic Analysis
+  - Core Algorithm Design Paradigms
+  - Graph Algorithms 
 - Data Structure
+  - Fundamental of Abstract Data Types(ADTs)
 - Connectionist AI
+  - Biological Inspiration and The Perceptron
+  - Core Learning Mechanism
+  - Major Network Architecutures
+  - Unsupervised and Generative Learning
+  - Reinfored Learning
