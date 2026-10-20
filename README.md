@@ -1,5 +1,6 @@
 # Wahaha-Project
-This group aims to create a learning source for topics in Algorithm, Data Structure, and Connectionist AI. Perquisite knowledges required for this course is basic high school mathematical skills.  
+This group aims to create a learning source for topics in Algorithm, Data Structure, and Connectionist AI. 
+Perquisite knowledges required for this course is basic high school mathematical skills.  
 
 ## Team Members
 | English Name | Chinese Name | Role|
