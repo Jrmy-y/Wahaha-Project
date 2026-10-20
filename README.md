@@ -15,6 +15,7 @@ Perquisite knowledges required for this course is basic high school mathematical
 | Jeremy Lee | 温余愿 | Coordinator | 
 
 
+
 ## Chapters
 - Algorithm
   - Foundation of Algorithmic Analysis
