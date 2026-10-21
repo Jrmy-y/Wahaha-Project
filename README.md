@@ -16,7 +16,7 @@ Perquisite knowledges required for this course is basic high school mathematical
 
 
 
-## Materials 
+## Chapter Topics
 - Algorithm
   - Foundation of Algorithmic Analysis
   - Core Algorithm Design Paradigms
@@ -29,3 +29,13 @@ Perquisite knowledges required for this course is basic high school mathematical
   - Major Network Architecutures
   - Unsupervised and Generative Learning
   - Reinfored Learning
+
+
+## Learning Materials
+
+
+### Study Guide
+### Video Explanation
+### PPT Document 
+
+
