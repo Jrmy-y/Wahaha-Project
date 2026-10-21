@@ -6,7 +6,7 @@ Perquisite knowledges required for this course is basic high school mathematical
 
 ## Team Members
 | English Name | Chinese Name | Role|
-| ------------- | ------------- | ------------- |
+| :-------------: | :-------------: | :-------------: |
 | Arianna Aurora | 郑彩芳 | Visual Design Lead |
 | Mikael Darren Christovani | 刘宝田 | Quality Lead |
 | Doni Widianto Hendrayudo | 王综俊 | Repository and Submission Lead |
@@ -16,7 +16,7 @@ Perquisite knowledges required for this course is basic high school mathematical
 
 
 
-## Chapters
+## Materials 
 - Algorithm
   - Foundation of Algorithmic Analysis
   - Core Algorithm Design Paradigms
