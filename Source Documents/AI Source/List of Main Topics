@@ -1,5 +1,5 @@
 Main Topics 
-AI Source: https://chat.deepseek.com/share/bjjxqedthxt1z0vz60
+AI Source: https://chat.deepseek.com/share/3dhtz40fc982rc8w6e
 
 
 Algorithm and Data Structure 
@@ -28,11 +28,13 @@ Algorithm and Data Structure
     - Geometric Data Structures
 
 Connectionist AI
+  The "Symbolic vs Connectionist" Paradigm
   Biological Inspiration and The Perceptron
-    - The Neuron Model
+    - Biological Anatomy of a Neuron and The Neuron Model
     - Learning Rule 
   Core Learning Mechanism 
     - Supervised learning
+    - Semi-Supervised learning
     - Backpropagation 
     - Gradient Descent & Optimization
     - Loss Functions & Regularisations
@@ -48,3 +50,7 @@ Connectionist AI
   Reinforced Learning(RL)
     - The RL Framework
     - Reep RL
+  AI Ethics, Limitations, and Explainable AI
+    - The "Black Box" problem / Interpretability
+    - Bias and Fairness
+    - Overfitting and Generalisation
