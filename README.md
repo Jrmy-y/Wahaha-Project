@@ -88,5 +88,6 @@ This group aims to create a learning source for subject in Algorithm, Data Struc
 
 
 ### References
-For those who are curious for this project's legitimacy or wants to research further into the topics
+---
+> For those who are curious for this project's legitimacy or wants to research further into the topics
 <br/> This hyperlink will redirect you towards the folder containing the links along with the markdown file which is used for the foundation for all of projects.
