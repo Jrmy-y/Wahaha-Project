@@ -1,4 +1,4 @@
-# ![image alt](https://github.com/Jrmy-y/Wahaha-Project/blob/bf28275951678fa97316fff265e0ebb94706cb85/Source%20Documents/Team%20Name)
+# ![image alt]([https://github.com/Jrmy-y/Wahaha-Project/blob/bf28275951678fa97316fff265e0ebb94706cb85/Source%20Documents/Team%20Name](https://github.com/Jrmy-y/Wahaha-Project/blob/82342ae3516787dd614876c979cd3354953eb211/References/Team%20Name.png))
 This group aims to create a learning source for subject in Algorithm, Data Structure, and Connectionist AI. 
 <br/> Perquisite knowledges required for this course is basic high school mathematical skills.  <br/> We use AI to research the topics we need to cover with the addition of fact checking with source that the AI sourced from.
 
