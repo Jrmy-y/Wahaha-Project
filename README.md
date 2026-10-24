@@ -18,18 +18,59 @@ This group aims to create a learning source for subject in Algorithm, Data Struc
 
 
 ## Chapter Topics
+- Data Structure
+  - Introduction to Data Structures
+    - Why is Data Structure needed?
+    - Examples of real-life application
+    - Data vs Data Structures.
+  - Fundamental of Abstract Data Types(ADTs)
+    - Linear Structures
+    - Priority Queus
+    - Maps & Sets
+    - Data Structures for strings
 - Algorithm
   - Foundation of Algorithmic Analysis
+    - Asymptotic Notation
+    - Recurrence Relations
+    - Amortized Analysis
   - Core Algorithm Design Paradigms
-  - Graph Algorithms 
-- Data Structure
-  - Fundamental of Abstract Data Types(ADTs)
+    - Divide and Conquer
+    - Greedy Algorithm
+    - Backtracking & Branch-and-Bound
+    - Randomised Algorithms
+    - Approximation & NP-Hardness
+  - Graph Algorithms
+    - Graph Traversal
+    - Shortest Paths
+    - Minimum Spanning Trees
+    - Network Flow
 - Connectionist AI
+  - The "Symbolic vs Connectionist" Paradigm
   - Biological Inspiration and The Perceptron
+    - The Biological Anatomy of a Neuron and The Neuron Model
+    - Learning Rule
   - Core Learning Mechanism
+    - Supervised learning
+    - Semi-supervised learning
+    - Backpropagation
+    - Gradient Descent & Optimisation
+    - Loss Functions & Regularisations 
   - Major Network Architecutures
+    - Feedforward Network (MLPs)
+    - Convolutional Neural Networks(CNNs)
+    - Recurrent Neural Network(RNNs)
+    - Transformers
   - Unsupervised and Generative Learning
-  - Reinfored Learning
+    - Clustering & Dimensionality Reduction
+    - Autoencoders
+    - Generative Adversarial Networks(GANs)
+  - Reinfored Learning(RL)
+    - The RL Framework
+    - Reep 
+  - AI Ethics, Limitations, and Explanaible AI
+    - The "Black Box" problem / Interpretability
+    - Bias and Fairness
+    - Overfitting and Generalisation
 
 
 ## Learning Materials
