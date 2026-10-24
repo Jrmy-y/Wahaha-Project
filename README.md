@@ -35,13 +35,13 @@ Perquisite knowledges required for this course is basic high school mathematical
 
 
 - ### Study Guide
+  The study guide will essentially be the textbook for this subject which will be used by the users to recite and learn from. It will include explanations for the topics, examples, and questions for the learners to test their understanding.
 ---
-> The study guide will essentially be the textbook for this subject which will be used by the users to recite and learn from. It will include explanations for the topics, examples, and questions for the learners to test their understanding.
 - ### Video Explanation
+  The video will help the learners to study subject as many people find it better to study visually rather than reading, this will also help prevent any misconceptions of the subject.
 ---
-> The video will help the learners to study subject as many people find it better to study visually rather than reading, this will also help prevent any misconceptions of the subject.
-- ### PPT Document 
+- ### PPT Document
+  The PPT document will be the document used to present the subject in class and this can be used by students to review on the subject after class, so during class could solely focus on the explanation in the presentation which will be more productive instead of listening and noting down at the same time.
 ---
-> The PPT document will be the document used to present the subject in class and this can be used by students to review on the subject after class, so during class could solely focus on the explanation in the presentation which will be more productive instead of listening and noting down at the same time.
 
 
