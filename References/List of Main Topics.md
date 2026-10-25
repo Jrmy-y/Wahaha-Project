@@ -66,5 +66,5 @@ further research in regards of the topics will be researched from individual sou
    - Reep RL
   ### AI Ethics, Limitations, and Explainable AI
    - The "Black Box" problem / Interpretability
-    - Bias and Fairness
-    - Overfitting and Generalisation
+   - Bias and Fairness
+   - Overfitting and Generalisation
