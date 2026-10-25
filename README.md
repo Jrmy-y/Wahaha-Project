@@ -75,13 +75,13 @@ This group aims to create a learning source for subject in Algorithm, Data Struc
 ## Learning Materials
 
 
-- ### Study Guide
+- ### [Study Guide](https://github.com/Jrmy-y/Wahaha-Project/tree/4c48305c0828f434aba2b5a0fc3a6c32a8164268/Learning%20Materials%20/Study%20Guide%20)
   The study guide will essentially be the textbook for this subject which will be used by the users to recite and learn from. It will include explanations for the topics, examples, and questions for the learners to test their understanding.
 ---
 - ### [Video Explanation](https://github.com/Jrmy-y/Wahaha-Project/tree/709d7f2a080cfc86b52eec7b8baf7f434bab8ee5/Learning%20Materials%20/Video%20Explanations%20)
   The video will help the learners to study subject as many people find it better to study visually rather than reading, this will also help prevent any misconceptions of the subject.
 ---
-- ### PPT Document
+- ### [PPT Document](https://github.com/Jrmy-y/Wahaha-Project/tree/4c48305c0828f434aba2b5a0fc3a6c32a8164268/Learning%20Materials%20/PPT%20Document)
   The PPT document will be the document used to present the subject in class and this can be used by students to review on the subject after class, so during class could solely focus on the explanation in the presentation which will be more productive instead of listening and noting down at the same time.
 ---
 
