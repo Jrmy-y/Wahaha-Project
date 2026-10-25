@@ -78,7 +78,7 @@ This group aims to create a learning source for subject in Algorithm, Data Struc
 - ### Study Guide
   The study guide will essentially be the textbook for this subject which will be used by the users to recite and learn from. It will include explanations for the topics, examples, and questions for the learners to test their understanding.
 ---
-- ### Video Explanation
+- ### [Video Explanation](https://github.com/Jrmy-y/Wahaha-Project/tree/709d7f2a080cfc86b52eec7b8baf7f434bab8ee5/Learning%20Materials%20/Video%20Explanations%20)
   The video will help the learners to study subject as many people find it better to study visually rather than reading, this will also help prevent any misconceptions of the subject.
 ---
 - ### PPT Document
