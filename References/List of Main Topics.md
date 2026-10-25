@@ -1,5 +1,6 @@
 Main Topics 
 AI Source: https://chat.deepseek.com/share/3dhtz40fc982rc8w6e
+<br/>
 
 ## Data Structure
   ### Introduction to Data Structures
@@ -12,7 +13,8 @@ AI Source: https://chat.deepseek.com/share/3dhtz40fc982rc8w6e
    - Priority Queues
    - Maps & Sets
 
-
+<br/>
+<br/>
 
 ## Algorithm
   ### Foundation of Algorithm Analysis 
@@ -35,7 +37,8 @@ AI Source: https://chat.deepseek.com/share/3dhtz40fc982rc8w6e
    - Data Structures for strings
    - Geometric Data Structures
 
-
+<br/>
+<br/>
 
 ## Connectionist AI
   ### The "Symbolic vs Connectionist" Paradigm
