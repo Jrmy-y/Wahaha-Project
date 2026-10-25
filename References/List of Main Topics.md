@@ -1,5 +1,7 @@
 Main Topics 
 AI Source: https://chat.deepseek.com/share/3dhtz40fc982rc8w6e
+> It provided us with the list of topics which covers the scope of this subject. 
+further research in regards of the topics will be researched from individual sources
 <br/>
 
 ## Data Structure
@@ -12,6 +14,8 @@ AI Source: https://chat.deepseek.com/share/3dhtz40fc982rc8w6e
    - Linear Structures
    - Priority Queues
    - Maps & Sets
+   - Data Structures for strings
+   - Geometric Data Structures
 
 <br/>
 <br/>
@@ -26,16 +30,13 @@ AI Source: https://chat.deepseek.com/share/3dhtz40fc982rc8w6e
    - Greedy Algorithms 
    - Dynamic Programming(DP)
    - Backtracking & Branch-and-Bound
+   - Randomized Algorithms
+   - Approximation & NP-Hardness
   ### Graph Algorithms
    - Traversa
    - Shortest Paths
    - Minimum Spanning Trees
    - Network Flow
-  ### The extra topics worth knowing at base level
-   - Randomized Algorithms
-   - Approximation & NP-Hardness
-   - Data Structures for strings
-   - Geometric Data Structures
 
 <br/>
 <br/>
