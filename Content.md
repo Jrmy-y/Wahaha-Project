@@ -1,14 +1,15 @@
-# Chapter 1: Introduction to Data Structure
-## Topic 1: Why is Data Structure Needed?
+# Chapter 1: Introduction to Data Structures
+## Topic 1: Why Are Data Structures Needed?
 
-### 1. Overview & Core Concept
-In computer science, data must be stored, accessed, processed, modified, and managed efficiently. A data structure is a way of organizing and storing data so that particular operations can be performed efficiently. Different data structures are designed to support different operations, and choosing an appropriate structure can improve an algorithm's time efficiency, memory usage, and maintainability.
+### 1.1 Overview and Core Concept
+In computer science, data must be stored, accessed, processed, modified, and managed efficiently. A data structure is a way of organizing and storing data so that particular operations can be performed efficiently.
 
-Without an appropriate data structure, a program may require excessive computation or memory as its workload grows. 
-However, no single data structure is optimal for every situation; the best choice depends on the data, the operations required, and the performance constraints.
+Different data structures are designed to support different operations. Choosing an appropriate structure can improve an algorithm's execution time, memory usage, and maintainability.
+
+Without a suitable data structure, a program may require excessive computation or memory as the amount of data increases. However, no single data structure is optimal for every situation. The best choice depends on the data, the operations required, and the system's performance constraints.
 
 #### Example
-A university needs to store the records of 10,000 students. Each record may contain:
+Suppose a university needs to store the records of 10,000 students. Each record may contain:
 - Student ID
 - Name
 - Age
@@ -25,12 +26,12 @@ The choice of data structure affects how efficiently the information can be acce
 
 ---
 
-### 2. Key Motivations & Technical Advantages
+### 1.2 Key Motivations and Technical Advantages
 
 #### A. Resource Efficiency: Time and Space Optimization
 Data structures influence the time and memory required to perform operations.
-* **Time complexity:** describes how the computational work of an algorithm grows as the input size increases.
-* **Space complexity:** describes how the memory requirements of an algorithm grow as the input size increases.
+* **Time complexity** describes how the computational work of an algorithm grows as the input size increases.
+* **Space complexity** describes how the memory requirements of an algorithm grow as the input size increases.
 
 For example, consider searching for a student ID in a collection:
 * Searching an unsorted array requires $O(n)$ time in the worst case.
@@ -104,63 +105,56 @@ Algorithm analysis helps estimate how efficiently an algorithm performs as its i
 
 ---
 
-## Topic 2: Examples of Real-Life Applications `[Drafted & Needs Revision]`
+## Topic 2: Data vs. Data Types vs. Data Structures
 
-Data structures are the silent backbone of everyday technology. Below is a breakdown of common data structures and their direct real-world uses:
-
-### 1. Stacks ($LIFO$ - Last In, First Out)
-* **Browser History (Back/Forward Buttons):** Every newly visited web page is pushed onto a stack. Clicking "Back" pops the current URL off the stack to reveal the previous page.
-* **Undo/Redo Mechanism in Text Editors:** Actions like typing or formatting are pushed onto a stack. Pressing `Ctrl+Z` pops the last action to reverse it.
-* **Function Call Stack in Compilers/Runtimes:** Keeps track of active function calls, local variables, and return addresses during program execution.
-
-### 2. Queues ($FIFO$ - First In, First Out)
-* **Printer & Task Scheduling:** Print requests sent to a shared printer wait in a FIFO queue so documents print in the exact order received.
-* **Web Server Request Handling:** incoming HTTP requests wait in a queue to be processed by background worker threads.
-* **Breadth-First Search (BFS):** Used in network routing and shortest-path finding algorithms.
-
-### 3. Hash Tables / Hash Maps (Key-Value Pairs)
-* **Database Indexing & Caching:** Enables near-instant ($O(1)$) data lookups, such as caching user session tokens or looking up user profiles by user ID.
-* **Symbol Tables in Compilers:** Used by compilers to map variable/function names to their memory locations and data types.
-* **Dictionary / Phonebook Lookups:** Fast searching of a key (contact name) to retrieve an associated value (phone number).
-
-### 4. Trees (Hierarchical Structures)
-* **File Systems (Directories and Files):** Operating system file structures use directory trees (e.g., `root/home/user/documents`).
-* **Document Object Model (DOM) in Browsers:** HTML documents are parsed into a tree structure, allowing JavaScript to traverse and manipulate elements.
-* **Abstract Syntax Trees (AST):** Compilers build ASTs to parse and evaluate programming code structure and logic.
-
-### 5. Graphs (Interconnected Networks)
-* **Social Media Connections:** Platforms like LinkedIn or Facebook model users as **nodes** and friendships/connections as **edges**.
-* **GPS & Navigation Systems:** Google Maps uses weighted graphs to compute the fastest route between locations using algorithms like Dijkstra’s or A*.
-* **Recommendation Engines:** Netflix or Spotify connect users, genres, and media items via graph relationships to generate recommendations.
+### 2.1 Definitions and Comparison
+| Feature | Data | Data Type | Data Structure |
+| :--- | :--- | :--- | :--- |
+| **Definition** | Information represented as values or symbols | A classification defining valid values and supported operations | A way of organizing and storing data elements |
+| **Main Question** | What information is represented? | What kind of value is this? | How are values organized and accessed? |
+| **Purpose** | Represent information | Define how values are interpreted and used | Support efficient operations on collections or relationships |
+| **Examples** | `85`, `"Hello"`, `3.14`, `true` | `int`, `float`, `bool`, `str` | Array, linked list, tree, graph, hash table |
 
 ---
 
-## Topic 3: Data vs. Data Structures `[Checked & Complete]`
+### 2.2 Abstract Data Types and Implementations
+An **Abstract Data Type (ADT)** defines a data type in terms of its behavior and supported operations, without requiring a particular internal implementation.
 
-Understanding the distinction between **Data**, **Data Types**, and **Data Structures** is fundamental to computer science.
+#### Example: Stack ADT
+* `push(x)`: Add `x` to the top.
+* `pop()`: Remove and return the top element.
+* `peek()`: Return the top element without removing it.
+* `isEmpty()`: Check whether the stack is empty.
 
-| Feature | Data | Data Type | Data Structure |
-| :--- | :--- | :--- | :--- |
-| **Definition** | Raw, unorganized facts, figures, or values without context. | A classification that tells the compiler how the programmer intends to use the data. | An organized collection of data items formatted for efficient memory storage & processing. |
-| **Abstraction Level** | Low (Atomic values). | Intermediate (Defines range of values and allowable operations). | High (Combines multiple data types and defines structural relationships). |
-| **Examples** | `42`, `"Hello"`, `3.14`, `true` | `int`, `float`, `char`, `boolean` | `Array`, `Linked List`, `Tree`, `Graph`, `Hash Table` |
-| **Focus** | What the value *is*. | What operations can be performed on a *single value*. | How values *relate to each other* and are *organized in memory*. |
+---
 
-### Detailed Breakdown
+### 2.3 Logical Organization vs. Physical Memory Layout
+* **Contiguous Storage (e.g., Arrays):** Elements occupy consecutive memory locations. Provides efficient indexed access and good memory locality.
+* **Linked Storage (e.g., Linked Lists):** Elements stored in nodes connected by pointers/references across non-consecutive addresses.
 
-1. **Data:**
-   * Pure info in its simplest form. By itself, data has no inherent behavior or structure.
-   * *Example:* The integer `85` is just a raw number until given context (e.g., a test score or a speed limit).
+---
 
-2. **Data Type:**
-   * Specifies the **type of value** a variable can hold and the operations allowed on it.
-   * **Primitive Data Types:** Built directly into the programming language (e.g., `int`, `float`, `bool`).
-   * *Example:* An `int` specifies 32-bit memory allocation and permits arithmetic operations like addition and multiplication.
+## Topic 3: Classification and Basic Operations
 
-3. **Data Structure:**
-   * Focuses on the **relationship between multiple data elements** and how they are stored collectively in memory.
-   * **Contiguous Allocation (e.g., Arrays):** Elements stored side-by-side in memory addresses.
-   * **Non-Contiguous Allocation (e.g., Linked Lists, Trees):** Elements stored in arbitrary memory locations connected via pointers/references.
-   * *Example:* An array of integers `[85, 90, 78]` is a Data Structure that groups multiple `int` Data Types together sequentially.
- 
+### 3.1 Classification of Data Structures
+* **Primitive vs. Non-Primitive:** Basic programming types vs. complex grouped structures.
+* **Linear vs. Non-Linear:** Sequential sequences (Arrays, Queues) vs. hierarchical/interconnected layouts (Trees, Graphs).
+* **Static vs. Dynamic:** Fixed capacity vs. resizable during execution.
+
+### 3.2 Fundamental Operations
+Common operations include **Traversal**, **Searching**, **Insertion**, **Deletion**, **Updating**, **Sorting**, and **Accessing**.
+
+---
+
+## Topic 4: Real-Life Applications
+
+* **4.1 Arrays and Dynamic Arrays:** Best for indexed collections and sequential numerical sets ($O(1)$ lookup).
+* **4.2 Linked Lists:** Ideal for frequent insertions/deletions at accessible pointers.
+* **4.3 Stacks ($LIFO$):** Used in undo/redo actions, call stacks, and expression evaluations.
+* **4.4 Queues ($FIFO$):** Used in printer scheduling, server requests, and Breadth-First Search (BFS).
+* **4.5 Hash Tables:** Excellent for caching, symbol tables, and key-value lookups ($O(1)$ average case).
+* **4.6 Trees:** Hierarchical file systems, DOM trees, and Abstract Syntax Trees (ASTs).
+* **4.7 Heaps & Priority Queues:** Event-driven simulations, task queues, and Dijkstra's algorithm.
+* **4.8 Graphs:** Social networks, GPS routing, and recommendation systems.
+
 ---
