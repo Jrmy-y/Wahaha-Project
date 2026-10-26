@@ -1,7 +1,7 @@
-# Chapter 1: Introduction to Data Structure `[Drafted]`
+# Chapter 1: Introduction to Data Structure
 
-## Topic 1: Why is Data structure needed? `- [x] Complete`
+## Topic 1: Why is Data structure needed? 
 
-### Topic 2: Examples of real-life application `- [ ] Needs Revision (Drafted)`
+## Topic 2: Examples of real-life application 
 
-### Topic 3: Data vs Data Structures `- [x] Complete`
+## Topic 3: Data vs Data Structures
