@@ -2,11 +2,11 @@
 ## Topic 1: Why is Data Structure Needed?
 
 ### 1. Overview & Core Concept
-In computer science, data isn't just stored—it must be retrieved, processed, modified, and managed efficiently. A **Data Structure** is a specialized format for organizing, processing, retrieving, and storing data in a computer's memory so that operations can be performed efficiently.
+In computer science, data needs to be stored, retrieved, processed, modified, and managed efficiently. Hence, a **Data Structure** is needed in order to provide a specialized format for organizing, processing, retrieving, and storing data in a computer's memory so that operations can be performed efficiently.
 
-Without appropriate data structures, programs quickly become slow, resource-heavy, and unmaintainable as data scales.
+Without appropriate data structures, programs quickly become slow, resource heavy, and unmaintainable as the amount of data increases.
 
----
+
 
 ### 2. Key Motivations & Technical Advantages
 
@@ -30,7 +30,7 @@ Without appropriate data structures, programs quickly become slow, resource-heav
 
 ---
 
-## Topic 2: Examples of Real-Life Applications `[Drafted & Needs Revision]`
+## Topic 2: Examples of Real-Life Applications 
 
 Data structures are the silent backbone of everyday technology. Below is a breakdown of common data structures and their direct real-world uses:
 
@@ -61,7 +61,7 @@ Data structures are the silent backbone of everyday technology. Below is a break
 
 ---
 
-## Topic 3: Data vs. Data Structures `[Checked & Complete]`
+## Topic 3: Data vs. Data Structures
 
 Understanding the distinction between **Data**, **Data Types**, and **Data Structures** is fundamental to computer science.
 
