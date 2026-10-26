@@ -6,9 +6,10 @@ further research in regards of the topics will be researched from individual sou
 
 ## Data Structure
   ### Introduction to Data Structures
-   - Why is Data structure needed?
-   - Example of real-life application
-   - Data vs Data Structures
+   - Why Are Data Structures Needed?
+   - Data vs. Data Types vs. Data Structures
+   - Classification and Basic Operations
+   - Real-Life Applications
    
   ### Fundamental Abstract Data Types(ADTs)
    - Linear Structures
