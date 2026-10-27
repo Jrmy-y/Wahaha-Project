@@ -102,6 +102,7 @@ Algorithm analysis helps estimate how efficiently an algorithm performs as its i
 | **Selecting highest-priority item** | Priority queue | Efficient priority-based retrieval |
 | **Maintaining sorted data with updates**| Balanced search tree | Efficient ordered operations |
 | **Representing arbitrary connections** | Graph | Models vertices and edges |
+
 ![image alt](https://github.com/Jrmy-y/Wahaha-Project/blob/231a2bd47004b002b1cdfbf0be82b815034ed6d2/Assets/Images/stack-vs-queue.webp)
 
 ---
