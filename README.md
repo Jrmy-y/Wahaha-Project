@@ -17,8 +17,9 @@ This group aims to create a learning source for subject in Algorithm, Data Struc
 
 
 ## Project Plan & Task tracking
-This project is tracked on the GitHub Project board: [GitHub Project Board](https://github.com/Jrmy-y/Wahaha-Project/projects)<br\>
+This project is tracked on the GitHub Project board: [GitHub Project Board](https://github.com/Jrmy-y/Wahaha-Project/projects)
 ### Current Progress
+<--->
 #### Completed:
 - Project structure
 - Module planning
