@@ -32,7 +32,8 @@ This project is tracked on the GitHub Project board: [GitHub Project Board](http
 #### Not started
 - Add diagrams to other necessary sections
  
-
+<br/>
+<br/>
 
 ## Chapter Topics
 - Data Structure
