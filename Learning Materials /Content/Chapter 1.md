@@ -102,6 +102,7 @@ Algorithm analysis helps estimate how efficiently an algorithm performs as its i
 | **Selecting highest-priority item** | Priority queue | Efficient priority-based retrieval |
 | **Maintaining sorted data with updates**| Balanced search tree | Efficient ordered operations |
 | **Representing arbitrary connections** | Graph | Models vertices and edges |
+![image alt](https://github.com/Jrmy-y/Wahaha-Project/blob/231a2bd47004b002b1cdfbf0be82b815034ed6d2/Assets/Images/stack-vs-queue.webp)
 
 ---
 
@@ -131,7 +132,7 @@ An **Abstract Data Type (ADT)** defines a data type in terms of its behavior and
 ### 2.3 Logical Organization vs. Physical Memory Layout
 * **Contiguous Storage (e.g., Arrays):** Elements occupy consecutive memory locations. Provides efficient indexed access and good memory locality.
 * **Linked Storage (e.g., Linked Lists):** Elements stored in nodes connected by pointers/references across non-consecutive addresses.
-
+![image alt](https://github.com/Jrmy-y/Wahaha-Project/blob/231a2bd47004b002b1cdfbf0be82b815034ed6d2/Assets/Images/Array%20vs%20Link.png)
 ---
 
 ## Topic 3: Classification and Basic Operations
@@ -140,6 +141,7 @@ An **Abstract Data Type (ADT)** defines a data type in terms of its behavior and
 * **Primitive vs. Non-Primitive:** Basic programming types vs. complex grouped structures.
 * **Linear vs. Non-Linear:** Sequential sequences (Arrays, Queues) vs. hierarchical/interconnected layouts (Trees, Graphs).
 * **Static vs. Dynamic:** Fixed capacity vs. resizable during execution.
+
 
 ### 3.2 Fundamental Operations
 Common operations include **Traversal**, **Searching**, **Insertion**, **Deletion**, **Updating**, **Sorting**, and **Accessing**.
@@ -154,6 +156,7 @@ Common operations include **Traversal**, **Searching**, **Insertion**, **Deletio
 * **4.4 Queues ($FIFO$):** Used in printer scheduling, server requests, and Breadth-First Search (BFS).
 * **4.5 Hash Tables:** Excellent for caching, symbol tables, and key-value lookups ($O(1)$ average case).
 * **4.6 Trees:** Hierarchical file systems, DOM trees, and Abstract Syntax Trees (ASTs).
+![image alt](https://github.com/Jrmy-y/Wahaha-Project/blob/231a2bd47004b002b1cdfbf0be82b815034ed6d2/Assets/Images/Tree%20vs%20Graph.webp)
 * **4.7 Heaps & Priority Queues:** Event-driven simulations, task queues, and Dijkstra's algorithm.
 * **4.8 Graphs:** Social networks, GPS routing, and recommendation systems.
 
