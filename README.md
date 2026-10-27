@@ -5,14 +5,14 @@ This group aims to create a learning source for subject in Algorithm, Data Struc
 
 
 ## Team Members
-| English Name | Chinese Name | Role|
-| :-------------: | :-------------: | :-------------: |
-| Arianna Aurora | 郑彩芳 | Visual Design Lead |
-| Mikael Darren Christovani | 刘宝田 | Quality Lead |
-| Doni Widianto Hendrayudo | 王综俊 | Repository and Submission Lead |
-| Gracia Winnie Susanto | 黄婉婷 | Video Lead |
-| Felicia Lusijanto  | 李瑞霞 | Content Lead |
-| Jeremy Lee | 温余愿 | Coordinator | 
+| English Name | Chinese Name | GitHub Username | Role |
+| :-------------: | :-------------: | :---------------: |:-------------: |
+| Arianna Aurora | 郑彩芳 | arianna-dot | Visual Design Lead |
+| Mikael Darren Christovani | 刘宝田 | doooooodie | Quality Lead |
+| Doni Widianto Hendrayudo | 王综俊 | MaouDon | Repository and Submission Lead |
+| Gracia Winnie Susanto | 黄婉婷 | gracia | Video Lead |
+| Felicia Lusijanto  | 李瑞霞 | felice-1234 | Content Lead |
+| Jeremy Lee | 温余愿 | Jrmy-y | Coordinator | 
 
 
 
