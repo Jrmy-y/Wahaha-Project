@@ -16,6 +16,23 @@ This group aims to create a learning source for subject in Algorithm, Data Struc
 
 
 
+## Project Plan & Task tracking
+This project is tracked on the GitHub Project board: [GitHub Project Board](https://github.com/Jrmy-y/Wahaha-Project/projects)<br\>
+### Current Progress
+#### Completed:
+- Project structure
+- Module planning
+- Chapter draft
+#### In Progress:
+- Finalise the foundational markdown file for the scope of the module
+- First draft of study guide content 
+- First draft of PPT 
+- First draft of video
+#### Not started
+- Add diagrams to other necessary sections
+ 
+
+
 ## Chapter Topics
 - Data Structure
   - Introduction to Data Structures
