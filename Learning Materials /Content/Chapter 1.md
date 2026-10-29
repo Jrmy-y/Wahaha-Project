@@ -162,3 +162,46 @@ Common operations include **Traversal**, **Searching**, **Insertion**, **Deletio
 * **4.8 Graphs:** Social networks, GPS routing, and recommendation systems.
 
 ---
+
+
+# Chapter 2: Algorithms
+What is an algorithm? An algorithm is basically a recipe to a recipe. A list of steps that turns input into output which doesn't vary, furthermore it is the building block of every AI.
+
+
+## Topic 1: Foundation of Algorithms Analysis
+There are 3 ways to analyse an algorithm:
+- Exact operation count
+  a mathematical count or model of the computational operations an algorithm performs for a   
+  particular input size and a particular input.
+- Asymptotic growth
+  Describes how an algorithm's operation count changes as its input size becomes very large
+- Measured Execution time
+  The actual time an implementation tkaes to run on a particular machine under particular 
+  conditions.
+
+  
+### 1.1 Asymptotic notation
+Asymptotic notation is a mathematical system for describing how an algorithm's resource requirements grow as its input size approaches infinity.
+<br/>
+<br/>
+Asymptotic analysis allows us to compare algorithms without depending on a specific processor, programming language or machine speed.<br/>
+<br/>
+#### Main asymptotic notations
+- Big O: Asymptotic upper bound
+  This notation gives the upper bound on the eventual growth of a function.
+  $'T(n) = O(g(n))'$ where $'0 <= f(n) <= cg(n)'$
+### 1.2 Recurrence Relations
+### 1.3 Amortized Analysis
+## Topic 2: Core Algorithms Design Paradigms
+### 2.1 Divide and Conquer
+### 2.2 Greedy Algorithms 
+### 2.3 Dynamic Programming(DP)
+### 2.4 Backtracking & Branch-and-Bound
+### 2.5 Randomized Algorithms
+### 2.6 Randomized Algorithms
+## Topic 3: Graph Algorithms
+### 3.1 Graph Traversal
+### 3.2 Shortest Paths
+### 3.3 Minimum Spanning Trees
+### 3.4 Network Flow
+
