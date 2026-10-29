@@ -189,7 +189,7 @@ Asymptotic analysis allows us to compare algorithms without depending on a speci
 #### Main asymptotic notations
 - Big O: Asymptotic upper bound
   This notation gives the upper bound on the eventual growth of a function.
-  $'T(n) = O(g(n))'$ where $'0 <= f(n) <= cg(n)'$
+  $T(n) = O(g(n))$ where $0 \leq f(n) \leq cg(n)$
 ### 1.2 Recurrence Relations
 ### 1.3 Amortized Analysis
 ## Topic 2: Core Algorithms Design Paradigms
