@@ -1068,79 +1068,89 @@ Too much exploration can waste time, while too little can prevent the agent from
 <br/><br/>
 ### 6.2 Deep Reinforcement Learning
 Deep reinforcement learning combines reinforcement learning with deep neural networks.
-<br/><br/>
+<br/>
 The neural network can learn representations or approximate decision-making functions when the state or action space is too large for simple tables.
-<br/<br/>
-6.2.2 Example: Deep Q-Networks
+<br/><br/>
+
+#### 6.2.1 Example: Deep Q-Networks
 A Deep Q-Network (DQN) uses a neural network to estimate the expected future return associated with taking an action in a particular state.
-
+<br/>
 These estimates are called Q-values.
-
-The agent can use them to select actions that are expected to yield higher cumulative rewards, while also exploring when appropriate.
-6.2.3 Applications and Challenges
+<br/><br/>
+The agent can use them to select actions that are expected to yield higher cumulative rewards, while also exploring when appropriate.<br/><br/>
+#### 6.2.2 Applications and Challenges
 Deep RL has been applied to games, robotics, and certain control problems.
-
+<br/>
 However, it can require substantial interaction data and computation. Training may also be unstable, and performance in simulation may not transfer reliably to the real world.
-
-Topic 7: Limitations, Interpretability, and Responsible AI
-7.1 The Black-Box Problem
-7.1.1 Definition
+<br/><br/>
+## Topic 7: Limitations, Interpretability, and Responsible AI
+### 7.1 The Black-Box Problem
 A black-box model produces outputs, but its internal reasoning may be difficult for humans to understand.
-
+<br/>
 Deep neural networks can learn complex relationships distributed across many layers and parameters. Consequently, it is often difficult to explain precisely why a particular input produced a particular output.
-7.1.2 Why Interpretability Matters
+<br/><br/>
+#### 7.1.1 Why Interpretability Matters
 Interpretability is important when decisions affect people's lives, such as in healthcare, financial services, and other high-stakes settings.
-
+<br/>
 Understanding a model's behaviour can help identify errors, investigate unexpected predictions, and determine whether the model is relying on inappropriate information.
-7.1.3 Explainable AI
+<br/><br/>
+#### 7.1.2 Explainable AI
 Explainable AI (XAI) refers to methods that help people understand or investigate model behaviour.
-
+<br/>
 Examples include:
 * Feature importance methods that estimate which inputs influence predictions.
 * Visual explanations that highlight image regions relevant to a prediction.
 * Simplified surrogate models that approximate a more complex model.
 * Counterfactual explanations that explore how changing an input might change the output.
 These methods have limitations. An explanation is not automatically faithful to the model's actual internal computation, so explanations must be evaluated carefully.
-7.2 Bias and Fairness
-7.2.1 Sources of Bias
+<br/><br/>
+### 7.2 Bias and Fairness
+#### 7.2.1 Sources of Bias
 AI systems can produce biased results for several reasons:
 * Training data does not adequately represent the population.
 * Historical data reflects existing social inequalities.
 * Labels contain errors or human biases.
 * The selected features or learning objective favour certain outcomes.
 * A model is deployed in a setting that differs from its training environment.
-7.2.2 Consequences
+<br/><br/>
+#### 7.2.2 Consequences
 A model may perform well on average while performing poorly for a particular group.
-
+<br/>
 For example, a speech recognition system might be less accurate for speakers whose accents were underrepresented in the training data.
-7.2.3 Reducing Bias
+<br/><br/>
+#### 7.2.3 Reducing Bias
 Possible approaches include:
 * Evaluating performance across relevant groups.
 * Improving the coverage and quality of training data.
 * Auditing labels, features, and evaluation procedures.
 * Monitoring the model after deployment.
 * Involving relevant stakeholders in the design and assessment process.
+<br/><br/>
 There is no single fairness metric that suits every problem. Different fairness criteria may conflict, so the appropriate approach depends on the application and its consequences.
-7.3 Overfitting and Generalisation
-7.3.1 Overfitting
+<br/><br/>
+### 7.3 Overfitting and Generalisation
+#### 7.3.1 Overfitting
 Overfitting occurs when a model learns details or noise specific to its training data instead of learning patterns that generalise well.
-
+<br/>
 An overfitted model may perform very well on the training set but poorly on unseen examples.
-7.3.2 Underfitting
+#### 7.3.2 Underfitting
 Underfitting occurs when a model is too limited, or has not been trained sufficiently, to capture the important patterns in the data.
-
+<br/>
 It may perform poorly on both the training data and unseen data.
-7.3.3 Generalisation
+<br/><br/>
+#### 7.3.3 Generalisation
 Generalisation describes how well a trained model performs on new data drawn from the target setting.
+<br/>
+A common way to investigate generalisation is to compare training and validation performance.<br/>
+| Situation |	Training performance | Validation performance | Likely interpretation |
+| --------- | -------------------- | ---------------------- | --------------------- |
+| Good fit	| Good |	Good | The model has learned useful patterns |
+| Overfitting	| Very good |	Poorer | The model may have memorised training-specific details |
+| Underfitting |	Poor |	Poor |	The model may not have learned the important patterns |
 
-A common way to investigate generalisation is to compare training and validation performance.
-Situation	Training performance	Validation performance	Likely interpretation
-Good fit	Good	Good	The model has learned useful patterns
-Overfitting	Very good	Poorer	The model may have memorised training-specific details
-Underfitting	Poor	Poor	The model may not have learned the important patterns
+These are common patterns rather than absolute rules. A reliable assessment also depends on how representative the validation data is.<br/><br/>
 
-These are common patterns rather than absolute rules. A reliable assessment also depends on how representative the validation data is.
-7.3.4 Reducing Overfitting
+#### 7.3.4 Reducing Overfitting
 Common approaches include:
 * Collecting more representative training data.
 * Applying regularisation.
@@ -1148,11 +1158,13 @@ Common approaches include:
 * Reducing model complexity.
 * Using early stopping.
 * Evaluating on data that was not used to train or tune the model.
+<br/><br/>
 The aim is not simply to maximise training accuracy, but to build a model that performs reliably on the data it will encounter in practice.
+<br/><br/>
 
-Topic 8: Connecting the Concepts
-8.1 The Complete Neural Network Learning Process
-8.1.1 From Data to Prediction
+## Topic 8: Connecting the Concepts
+### 8.1 The Complete Neural Network Learning Process
+#### 8.1.1 From Data to Prediction
 A typical supervised neural network training process can be summarised as follows:
 1. The dataset supplies an input.
 2. The network processes it through forward propagation.
@@ -1161,104 +1173,31 @@ A typical supervised neural network training process can be summarised as follow
 5. An optimisation algorithm updates the weights and biases.
 6. The process repeats over many examples.
 7. The trained model is evaluated on separate data.
+<br/><br/>
 Each part serves a different purpose. The architecture defines how information is processed, the loss defines what the model is trying to improve, backpropagation calculates gradients, and the optimiser uses those gradients to update parameters.
-8.2 Comparing Learning Approaches
-Approach	Type of feedback	Main objective	Example
-Supervised learning	Labelled target	Predict the correct output	Classifying images
-Semi-supervised learning	Some labelled and much unlabelled data	Improve learning with limited labels	Medical image classification
-Unsupervised learning	No target labels required	Discover structure or representations	Customer clustering
-Reinforcement learning	Rewards from interaction	Maximise cumulative reward	Robot navigation
-Self-supervised learning	Targets constructed from the data itself	Learn useful representations	Predicting masked words in text
+<br/><br/>
+### 8.2 Comparing Learning Approaches
+| Approach | Type of feedback |	Main objective | Example |
+| -------- | ---------------- | -------------- | --------|
+| Supervised learning |	Labelled target	| Predict the correct output | Classifying images |
+| Semi-supervised learning | Some labelled and much unlabeled data | Improve learning with limited labels |	Medical image classification |
+| Unsupervised learning |	No target labels required	| Discover structure or representations	| Customer clustering |
+| Reinforcement learning |	Rewards from interaction |	Maximize cumulative reward | Robot navigation |
+| Self-supervised learning | Targets constructed from the data itself |	Learn useful representations | Predicting masked words in text |
 
 Important distinction: Self-supervised learning is not the same as semi-supervised learning. Self-supervised methods create training signals from the data itself, whereas semi-supervised methods combine labelled and unlabelled data.
-8.3 Comparing the Main Architectures
-8.3.1 Architecture Selection
+### 8.3 Comparing the Main Architectures
 The main architectures differ in how they represent and process information:
 * MLPs are general-purpose networks for numerical features.
 * CNNs are designed to exploit local spatial patterns.
 * RNNs process sequences using a recurrent hidden state.
 * Transformers use attention to model relationships between sequence elements.
+<br/><br/>
 These categories are not mutually exclusive in all practical systems. Modern models can combine architectural ideas, and the best choice depends on the task.
-8.4 Comparing Generative Models
+<br/>
+### 8.4 Comparing Generative Models
 8.4.1 Autoencoders and GANs
-An autoencoder learns to reconstruct its input through an encoded representation. A GAN learns to generate samples through competition between a generator and a discriminator.
-
+An autoencoder learns to reconstruct its input through an encoded representation.<br/>
+A GAN learns to generate samples through competition between a generator and a discriminator.
+<br/><br/>
 Both can learn from data without ordinary human-provided class labels, but their objectives differ.
-
-Generative AI includes many other approaches, so these two architectures should be understood as examples rather than a complete list.
-
-Topic 9: Essential Mathematics for Connectionist AI
-9.1 Linear Algebra
-9.1.1 Scalars, Vectors, and Matrices
-Linear algebra provides the language used to represent and calculate with neural network data and parameters.
-* Scalar: A single number.
-* Vector: An ordered collection of numbers.
-* Matrix: A rectangular arrangement of numbers.
-* Tensor: A generalisation of scalars, vectors, and matrices to higher dimensions.
-For example, an image can be represented as a matrix of pixel values for a grayscale image or a three-dimensional array for a colour image.
-9.1.2 Matrix Multiplication
-Neural network layers often calculate weighted combinations of inputs using matrix multiplication.
-
-This makes it possible to process many neuron calculations efficiently in one operation.
-
-What to study: Vectors, matrices, dot products, matrix multiplication, and transposes. Eigenvalues and eigenvectors can be studied later, particularly when learning PCA and more advanced mathematics.
-9.2 Differential Calculus
-9.2.1 Derivatives
-A derivative describes how quickly a function changes with respect to its input.
-
-In machine learning, derivatives help determine how changing a parameter affects a model's loss.
-9.2.2 Partial Derivatives
-A partial derivative measures the change in a function with respect to one variable while the other variables are held constant.
-
-This is important because a neural network's loss depends on many weights and biases.
-9.2.3 Chain Rule and Gradients
-The chain rule makes it possible to calculate derivatives through multiple linked functions. Gradients collect partial derivatives into a vector.
-
-These concepts are essential for understanding backpropagation and gradient-based optimisation.
-
-What to study: Derivatives, partial derivatives, the chain rule, and gradients. Jacobians and Hessians are useful later, but are not prerequisites for understanding the basic training process.
-9.3 Probability and Statistics
-9.3.1 Basic Probability
-Probability provides a mathematical framework for reasoning about uncertainty.
-
-Important concepts include:
-* Probability distributions.
-* Conditional probability.
-* Expected value.
-* Variance.
-* Mean and standard deviation.
-These concepts help explain uncertain predictions, statistical evaluation, and the behaviour of data.
-9.3.2 Probability in Neural Networks
-Some neural network outputs represent probabilities, such as the estimated probability that an image belongs to a particular class.
-
-However, a model's predicted probability is not necessarily well calibrated. A prediction of 0.9 does not automatically mean that the model is correct 90% of the time for all predictions receiving that score.
-9.3.3 Entropy and Cross-Entropy
-Entropy measures uncertainty in a probability distribution. Cross-entropy measures how well one probability distribution represents another and is commonly used in classification losses.
-
-What to study: Basic probability, conditional probability, distributions, expected value, variance, and logarithms. Learn entropy and cross-entropy when studying classification loss functions.
-9.4 Optimisation
-9.4.1 Objective Functions
-An objective function is a mathematical quantity that an optimisation algorithm attempts to minimise or maximise.
-
-In supervised neural network training, the loss function is commonly minimised.
-9.4.2 Gradient-Based Optimisation
-Gradient descent uses gradients to adjust parameters towards lower values of the objective.
-
-Other optimisation algorithms, such as Adam, modify how updates are calculated and are commonly used in deep learning.
-9.4.3 Practical Considerations
-Training depends on choices such as the learning rate, batch size, parameter initialisation, and optimisation algorithm.
-
-Poor choices can cause training to be slow or unstable, even when the architecture is appropriate.
-
-What to study: Objective functions, gradients, gradient descent, learning rates, and the basic idea of stochastic optimisation. Learn Adam and other optimisers after understanding ordinary gradient descent.
-9.5 Reinforcement Learning Mathematics
-9.5.1 Expected Return
-Reinforcement learning evaluates actions partly by their expected future rewards. The discounted return accounts for rewards that arrive at different times.
-9.5.2 Markov Decision Processes
-A Markov decision process (MDP) is a mathematical framework for modelling sequential decisions. It describes states, actions, transition probabilities, and rewards.
-9.5.3 Value Functions
-Value functions estimate the expected return associated with a state or a state-action pair.
-
-They help an agent compare different decisions.
-
-What to study: Expected value, conditional probability, discounted return, states, actions, rewards, and policies. Bellman equations and advanced reinforcement learning algorithms can be learned later.
