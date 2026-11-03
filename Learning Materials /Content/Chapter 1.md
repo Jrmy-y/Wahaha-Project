@@ -525,3 +525,723 @@ These are different optimisation problems.
 - Maximum flow: Maximise the total amount sent from source to sink, subject to capacities and conservation.
 - Minimum-cost flow: Send a required amount of flow, or otherwise satisfy specified supplies and demands, while minimising the total cost.<br/><br/>
 In minimum-cost flow, each edge has both a capacity and a cost. A large-capacity route may be more expensive than a smaller-capacity route, so capacity alone is insufficient to determine the optimum.
+
+<br/><br/><br/>
+
+# Chapter 3: Connectionist AI
+## Topic 1: Introduction to Connectionist AI
+### 1.1 What Is Connectionist AI?
+Connectionist AI is an approach to artificial intelligence that models intelligent behaviour using networks of interconnected, simple computational units. These units are inspired by biological neurons and are commonly called **artificial neurons**.
+<br/><br/>
+#### 1.1.1 Main Characteristics
+- **Interconnected units**<br/>
+  Artificial neurons are connected to form a network.
+- **Learning from data**<br/>
+  The network adjusts its internal parameters based on examples.
+- **Distributed representations**<br/>
+  Information can be represented across multiple neurons rather than stored in one location.
+- **Nonlinear processing**<br/> Activation functions allow networks to learn complex relationships.
+- **Generalisation**<br/> A trained network can make predictions on new data, provided it has learned useful patterns.
+<br/>
+
+#### 1.1.2 Applications
+Connectionist AI is used in many modern AI systems, including:
+* Image recognition and object detection.
+* Speech recognition and speech generation.
+* Language translation and large language models.
+* Recommendation systems.
+* Medical image analysis.
+* Robotics and autonomous vehicles.
+<br/>
+
+### 1.2 Symbolic AI vs Connectionist AI
+Symbolic AI represents knowledge using explicit symbols, rules, and logical relationships.
+<br/>
+Connectionist AI learns patterns from examples instead of relying entirely on manually written rules.
+
+| Feature |	Symbolic AI |	Connectionist AI |
+| ------- | ----------- | ---------------- |
+| Knowledge representation | Symbols and explicit rules | Numerical parameters and learned representations |
+| Learning | Often requires manually defined rules or knowledge | Often learns from training data |
+| Strength | Logical reasoning and interpretable rules | Pattern recognition and complex data
+| Limitation | Difficult to manually specify every relevant rule | Can require substantial data and computation |
+| Example |	Rule-based expert system | Image classification neural network |
+<br/>
+
+**These approaches are not mutually exclusive. Some AI systems combine neural networks with symbolic reasoning.**
+<br/><br/>
+
+### 1.3 How Connectionist AI Learns
+#### 1.3.1 The Basic Learning Process
+A neural network generally learns through the following process:
+1. **Input:** <br/> The network receives data, such as an image or a collection of numerical measurements.
+2. **Forward propagation:** <br/> The data passes through the network to produce a prediction.
+3. **Loss calculation:** <br/> The prediction is compared with the desired answer, when one is available.
+4. **Backpropagation:** <br/> The network calculates how its parameters contributed to the prediction error.
+5. **Optimisation:** <br/> An optimisation algorithm adjusts the parameters to reduce the error.
+6. **Iteration:** <br/> The process repeats across many training examples.
+The network gradually adjusts its parameters to produce better predictions.
+<br/>
+
+#### 1.3.2 Important Terminology
+* Parameter: A value, such as a weight or bias, that the network learns during training.
+* Training: The process of adjusting parameters using data.
+* Inference: Using a trained model to produce a prediction.
+* Loss: A numerical measure of how poorly a model's prediction matches its target.
+* Epoch: One complete pass through the training dataset.
+* Generalisation: The ability to perform well on data that was not used for training.
+
+## Topic 2: Biological Neurons and Artificial Neurons
+### 2.1 Biological Neurons
+2.1.1 Structure of a Biological Neuron
+A biological neuron is a specialised cell that receives, processes, and transmits signals.
+
+Its main parts include:
+* **Dendrites:** Receive signals from other neurons.
+* **Cell body:** Maintains the cell and integrates incoming signals.
+* **Axon:** Carries electrical signals away from the cell body.
+* **Synapse:** The junction through which a neuron communicates with another cell.
+<br/>
+![Neurone Diagram]()
+> Biological neurons communicate through complex electrochemical processes while artificial neurons simplify this behaviour into mathematical operations.<br/><br/>
+
+### 2.2 Artificial Neurons
+#### 2.2.1 Basic Structure
+An artificial neuron receives numerical inputs, multiplies each input by a corresponding weight, adds a bias, and applies an activation function.
+
+Its output can be represented as:<br/>
+$z = \sum_{i=1}^{n} w_i x_i + b$
+
+$a = f(z)$
+
+Where:
+* $x_i$ is an input.
+* $w_i$ is the weight associated with that input.
+* $b$ is the bias.
+* $z$ is the weighted sum before activation.
+* $f$ is the activation function.
+* $a$ is the neuron's output.
+<br/>
+
+#### 2.2.2 Weights and Biases
+Weights determine how strongly individual inputs influence a neuron.<br/>
+Biases allow a neuron to shift its activation threshold independently of its inputs.
+
+**For example:** <br/>
+a network predicting house prices might learn that house size is more influential than the colour of the front door. The corresponding weight for house size may therefore have a greater magnitude.
+
+Both weights and biases are learned during training.
+
+#### 2.2.3 Activation Functions
+An activation function transforms the weighted sum into the neuron's output.
+
+Common activation functions include:
+
+* **Step function:** <br/> 
+Produces one of two outputs depending on whether the input exceeds a threshold. It is useful for understanding the original perceptron, but it is not commonly used in modern networks trained through standard backpropagation.
+
+**Sigmoid function:** Produces an output between 0 and 1.
+$\sigma(z)=\frac{1}{1+e^{-z}}$
+It is useful for interpreting an output as a probability in some binary classification models.
+
+**ReLU (Rectified Linear Unit):** 
+Outputs zero for negative inputs and the input itself for positive inputs.
+$f(z)=\max(0,z)$
+ReLU is widely used in hidden layers because it is simple and often works well in practice.
+
+### 2.3 The Perceptron
+A perceptron is one of the simplest artificial neural models. It calculates a weighted sum of inputs and applies a threshold-based activation function to produce a prediction.
+
+For binary classification, its output can be expressed as:
+![binary classification]()
+
+Here, $hat{y}$ is the predicted class.
+
+#### 2.3.1 The Perceptron Learning Rule
+A basic perceptron learning rule adjusts its weights when its prediction is incorrect.
+
+A common form is:
+$w_i \leftarrow w_i+\eta(y-\hat{y})x_i$
+
+$b \leftarrow b+\eta(y-\hat{y})$
+
+Where:
+* $y$ is the correct target.
+* $\hat{y}$ is the prediction.
+* $\eta$ is the learning rate.
+* $x_i$ is the input associated with weight \(w_i\).
+
+If the prediction is correct, the error term is zero and this rule makes no update. If the prediction is incorrect, the weights and bias are adjusted.
+
+#### 2.3.2 Limitations of the Perceptron
+A single perceptron can learn linearly separable patterns, meaning the classes can be separated by a straight line in two dimensions or a hyperplane in higher dimensions.
+
+However, it cannot solve every classification problem.
+
+For example, the XOR problem requires a nonlinear decision boundary. A single perceptron cannot represent the required classification, but a multilayer network with suitable activation functions can.
+
+## Topic 3: Learning Methods and Neural Network Training
+### 3.1 Supervised Learning
+Supervised learning trains a model using examples that contain both inputs and their correct target outputs.
+
+For example, a dataset for predicting house prices might contain house sizes, locations, and other features alongside the actual sale prices.
+
+#### 3.1.1 Classification and Regression
+* Classification: Predicting a category, such as whether an email is spam.
+* Regression: Predicting a numerical value, such as the price of a house.
+
+#### 3.1.2 Training, Validation, and Testing
+* Training set: Used to learn model parameters.
+* Validation set: Used to compare model configurations and tune hyperparameters.
+* Test set: Used to evaluate the final model on data not used for training or model selection.
+
+Keeping these roles separate helps produce a more reliable estimate of how well the model generalises.
+
+### 3.2 Semi-Supervised Learning
+Semi-supervised learning uses a small amount of labelled data together with a larger amount of unlabelled data.
+
+For example, a medical image dataset may contain thousands of scans, but only a small proportion have been labelled by medical specialists.
+
+Semi-supervised methods attempt to use information from both labelled and unlabelled examples to improve learning.
+
+#### 3.2.1 Why It Is Useful
+Labelling data can be expensive, time-consuming, or require specialist knowledge.
+
+Semi-supervised learning can be useful when collecting raw data is easy but obtaining accurate labels is difficult. Its success depends on the dataset and the assumptions made by the learning method and unlabeled data does not automatically improve performance.
+
+### 3.3 Loss Functions
+A loss function measures the difference between a model's prediction and the target.
+
+The training process uses this value to determine whether the model is improving.
+
+For example, if a model predicts a house price of $200,000 when the actual price is $250,000, the loss function quantifies the prediction error.
+
+#### 3.3.1 Mean Squared Error
+Mean squared error (MSE) is commonly used for regression:
+$L = \frac{1}{n}\sum_{i=1}^{n}(y_i-\hat{y}_i)^2$
+
+Where:
+* $y_i$ is the actual value.
+* $hat{y}_i$ is the predicted value.
+* $n$ is the number of examples.
+
+Squaring the errors prevents positive and negative errors from cancelling each other out and penalises large errors more strongly.
+
+#### 3.3.2 Cross-Entropy Loss
+Cross-entropy is commonly used in classification.
+
+For binary classification, binary cross-entropy can be written as:
+$L=-\frac{1}{n}\sum_{i=1}^{n}
+\left[y_i\log(\hat{y}_i)+(1-y_i)\log(1-\hat{y}_i)\right]$
+
+It penalises predictions that assign low probability to the correct class.
+
+You do not need to memorise every loss function immediately. The important concept is that **the choice of loss function depends on the task and determines what the training process tries to improve.**
+
+
+### 3.4 Backpropagation
+Backpropagation is an algorithm used to calculate how the loss changes with respect to the weights and biases throughout a neural network.
+
+It works backwards from the loss, applying the chain rule of calculus to determine how each parameter contributes to the final error.
+
+Backpropagation calculates gradients. It does not, by itself, specify how the parameters are updated. An optimisation algorithm, such as gradient descent, uses those gradients to update the parameters.
+
+#### 3.4.1 Why It Is Necessary
+Consider a network with several layers. Changing a weight in an early layer can affect the activations of later layers and ultimately change the final prediction.
+
+Backpropagation efficiently calculates these effects, allowing the network to learn which parameter changes are likely to reduce the loss.
+
+#### 3.4.2 Basic Process
+1. Pass the input through the network.
+2. Calculate the prediction and loss.
+3. Calculate gradients by propagating information about the loss backwards.
+4. Use an optimisation algorithm to update the parameters.
+5. Repeat with further training examples.
+
+### 3.5 Gradient Descent
+Gradient descent is an optimisation algorithm that adjusts model parameters to reduce the loss.
+
+The basic update rule is:<br/>
+$\theta \leftarrow \theta-\eta\nabla_{\theta}L$
+
+Where:
+* $\theta$ represents the model parameters.
+* $L$ is the loss.
+* $\nabla_{\theta}L$ is the gradient of the loss with respect to the parameters.
+* $\eta$ is the learning rate.
+
+The gradient points in the direction of steepest local increase. Subtracting it moves the parameters in the direction of steepest local decrease, assuming a sufficiently small step.
+
+#### 3.5.1 Understanding the Learning Rate
+The learning rate determines the size of each parameter update.
+* Too small: Training may progress very slowly.
+* Too large: Training may overshoot useful parameter values or become unstable.
+* Appropriate: Training can make steady progress towards a lower loss.
+
+#### 3.5.2 Types of Gradient Descent
+* Batch gradient descent: Calculates the gradient using the entire training dataset.
+* Stochastic gradient descent (SGD): Uses one training example per update.
+* Mini-batch gradient descent: Uses a small group of examples per update.
+
+Mini-batch training is widely used in deep learning because it balances computational efficiency with frequent parameter updates.
+
+### 3.6 Partial Derivatives and Gradients
+#### 3.6.1 Why Partial Derivatives Matter
+A neural network can have millions of parameters. To train it, we need to understand how changing each parameter affects the loss.
+
+A partial derivative measures how a function changes with respect to one variable while treating the other variables as constant.
+
+For a function $f(x,y)$, the partial derivatives are:<br/>
+$\frac{\partial f}{\partial x}
+\qquad
+\text{and}
+\qquad
+\frac{\partial f}{\partial y}$
+<br/>
+For example, consider:
+$f(x,y)=x^2+3y$
+<br/>
+The partial derivatives are:<br/>
+$\frac{\partial f}{\partial x}=2x$
+
+$\frac{\partial f}{\partial y}=3$
+
+The first derivative describes how the function changes with $x$, while the second describes how it changes with $y$.
+
+#### 3.6.2 The Gradient
+The gradient is a vector containing the partial derivatives of a function.
+
+For the same function:<br/>
+![Gradient of f]()
+
+In neural network training, the gradient tells us how the loss changes with respect to the parameters.
+<br/><br/>
+Gradient descent uses this information to adjust those parameters.
+
+#### 3.6.3 The Chain Rule
+The chain rule allows us to differentiate a function that depends on another function.
+
+If:<br/>
+$y=f(u), \qquad u=g(x)$
+
+then:<br/>
+$\frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}$
+<br/>
+This is essential for backpropagation because the output of one neural network layer becomes the input to the next layer.
+<br/>
+The chain rule allows us to calculate how a change in an early layer affects the final loss through all the intermediate layers.
+<br/>
+Mathematics to learn: Basic differentiation, partial derivatives, the chain rule, and gradients. These are core prerequisites for understanding backpropagation and gradient descent.
+
+### 3.7 Regularisation
+Regularisation refers to methods used to reduce overfitting by discouraging a model from becoming unnecessarily complex or relying too heavily on particular patterns in the training data.
+
+One common approach is to add a penalty to the training objective:<br/>
+$L_{\text{total}}=L_{\text{data}}+\lambda R(\theta)$
+
+Where:
+* $L_{\text{data}}$ measures prediction error.
+* $R(\theta)$ is a regularisation penalty.
+* $\lambda$ controls the strength of that penalty.
+
+
+#### 3.7.2 Common Methods
+* **L1 regularisation:** <br/>
+Penalises the absolute values of parameters and can encourage some parameters to become zero.
+* **L2 regularisation:** <br/> 
+Penalises the squared magnitudes of parameters.
+* **Dropout:** <br/> Randomly disables some units during training to discourage excessive reliance on particular units.
+* **Early stopping:** <br/> Stops training when validation performance stops improving.
+Regularisation does not guarantee better performance. If applied too strongly, it can prevent the model from learning the underlying patterns adequately.
+
+## Topic 4: Neural Network Architectures
+### 4.1 Multilayer Perceptrons
+A multilayer perceptron (MLP) is a feedforward neural network containing an input layer, one or more hidden layers, and an output layer.
+
+Information flows from the input towards the output without recurrent connections.
+
+#### 4.1.2 Structure
+* **Input layer:** Receives the features.
+* **Hidden layers:** Transform the input into useful representations.
+* **Output layer:** Produces the final prediction.
+<br/>
+Each layer usually contains multiple neurons, with weights connecting neurons between layers.
+
+#### 4.1.3 Why Hidden Layers Matter
+A single linear layer can only represent a linear transformation. Adding hidden layers with nonlinear activation functions allows an MLP to learn more complex relationships.
+<br/>
+MLPs are useful for classification and regression on structured numerical data, although other architectures may be more suitable for images, sequences, or specialised data.
+
+### 4.2 Convolutional Neural Networks
+A convolutional neural network (CNN) is a neural network architecture designed to process data with spatial structure, especially images.<br/>
+CNNs use filters that examine local regions of an input and learn to detect patterns.
+
+#### 4.2.1 How Convolution Works
+A convolutional filter moves across an image and calculates responses to local patterns.
+<br/><br/>
+Early layers may learn to detect simple features such as edges or textures. Deeper layers can combine these features into more complex patterns.
+
+CNNs commonly use:
+* **Convolutional layers:** Detect local patterns.
+* **Activation functions:** Introduce nonlinearity.
+* **Pooling or other downsampling operations:** Reduce spatial dimensions when appropriate.
+* **Output layers:** Produce predictions.
+
+
+#### 4.2.2 Applications
+CNNs have been used for image classification, object detection, medical image analysis, and other tasks involving spatial data.
+
+### 4.3 Recurrent Neural Networks
+A recurrent neural network (RNN) is designed to process sequential data by maintaining a hidden state that carries information from earlier steps.
+
+For example, when processing a sentence, an RNN can use information from previously processed words when processing the next word.
+
+#### 4.3.1 Hidden State
+At each time step, an RNN updates its hidden state using the current input and the previous hidden state.
+
+A simplified representation is:<br/>
+$h_t=f(W_xx_t+W_hh_{t-1}+b)$
+
+Where:
+* $x_t$ is the current input.
+* $h_{t-1}$ is the previous hidden state.
+* $h_t$ is the updated hidden state.
+* $W_x$ and $W_h$ are learned weight matrices.
+<br/>
+This allows the network to maintain information across a sequence.
+<br/>
+#### 4.3.2 Limitations
+Basic RNNs can struggle to learn long-range dependencies because gradients may vanish or grow excessively during training.
+<br/><br/>
+Architectures such as LSTM (Long Short-Term Memory) and GRU (Gated Recurrent Unit) introduce mechanisms that help preserve useful information across longer sequences.
+<br/>
+### 4.4 Transformers
+A Transformer is a neural network architecture that uses attention mechanisms to model relationships between elements in a sequence.
+<br/><br/>
+Transformers are widely used in language models, machine translation, and many other AI applications.
+
+4.4.2 Attention Mechanism
+Attention allows the network to assign different levels of importance to different elements when computing a representation.
+
+For example, when interpreting a sentence, a model may use information from a distant word to understand the meaning of the current word.
+
+A common attention operation is:
+\[
+\operatorname{Attention}(Q,K,V)
+=
+\operatorname{softmax}
+\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+\]
+
+Where:
+* \(Q\) represents queries.
+* \(K\) represents keys.
+* \(V\) represents values.
+* \(d_k\) is the dimension of the key vectors.
+Conceptually, the operation compares queries with keys to determine which values should contribute most to the output.
+
+You do not need to derive this formula in your first introduction to Transformers. Focus first on understanding why attention helps a model use information from different parts of a sequence.
+4.4.3 Positional Information
+Attention alone does not automatically encode the order of a sequence. Transformers therefore use positional information so the model can distinguish between different positions.
+
+Without positional information or another mechanism that accounts for order, the model would not naturally distinguish many sequences that contain the same elements in different arrangements.
+4.4.4 Why Transformers Are Important
+Transformers can process sequence elements in parallel during training, unlike the sequential hidden-state updates of a basic RNN.
+
+They can also model relationships between distant elements effectively, although attention can become computationally expensive for very long sequences.
+4.5 Comparing Neural Network Architectures
+Architecture	Main idea	Typical applications
+MLP	Layers of interconnected neurons	Structured data, classification, regression
+CNN	Filters detect local spatial patterns	Image processing
+RNN	Hidden state carries information through a sequence	Sequential data, time series
+Transformer	Attention models relationships between sequence elements	Language models, translation, multimodal AI
+
+No architecture is universally best. The appropriate choice depends on the data, task, computational requirements, and training method.
+
+Topic 5: Unsupervised Learning and Generative Models
+5.1 Unsupervised Learning
+5.1.1 Definition
+Unsupervised learning attempts to discover patterns or structure in data without relying on labelled target answers.
+
+For example, a system might group customers according to purchasing behaviour without being told in advance which group each customer belongs to.
+5.1.2 Clustering
+Clustering groups data points according to their similarity under a chosen measure.
+
+A common example is K-means clustering, which assigns data points to \(K\) clusters and updates the cluster centres to reduce the distances between points and their assigned centres.
+
+Clustering is useful for exploratory data analysis, but the resulting groups do not automatically correspond to meaningful real-world categories.
+5.1.3 Dimensionality Reduction
+Dimensionality reduction represents data using fewer variables while attempting to preserve useful information.
+
+For example, a dataset with hundreds of measurements may be represented using a smaller number of components to make patterns easier to inspect.
+
+Principal component analysis (PCA) is a common linear dimensionality-reduction technique.
+5.2 Autoencoders
+5.2.1 Definition
+An autoencoder is a neural network trained to reconstruct its input.
+
+It contains two main components:
+* Encoder: Converts the input into a compressed or transformed representation.
+* Decoder: Uses that representation to reconstruct the input.
+The model is trained by comparing the reconstruction with the original input.
+5.2.2 Latent Representation
+The encoded representation is often called the latent representation or latent space.
+
+If the representation is constrained appropriately, the network may learn useful features of the input data.
+
+Autoencoders can be used for dimensionality reduction, feature learning, and certain types of anomaly detection.
+5.2.3 Limitations
+A reconstruction that looks accurate does not necessarily mean that the latent representation captures meaningful concepts. The usefulness of the learned representation depends on the architecture, objective, and data.
+5.3 Generative Adversarial Networks
+5.3.1 Definition
+A generative adversarial network (GAN) contains two neural networks trained in opposition:
+* Generator: Produces synthetic samples.
+* Discriminator: Attempts to distinguish real samples from generated samples.
+The generator attempts to produce samples that the discriminator classifies as real, while the discriminator learns to identify generated samples.
+5.3.2 Adversarial Training
+The two networks improve through a competitive training process.
+
+Ideally, the generator learns to produce increasingly realistic samples. In practice, training can be unstable and may fail to represent the full diversity of the training data.
+5.3.3 Applications
+GANs have been used for image generation, image-to-image translation, and data synthesis.
+
+They are one family of generative models. Other approaches, including diffusion models and autoregressive models, are also important in modern generative AI.
+5.4 Comparing Autoencoders and GANs
+Feature	Autoencoder	GAN
+Main objective	Reconstruct input data	Generate realistic samples
+Main components	Encoder and decoder	Generator and discriminator
+Training signal	Difference between input and reconstruction	Competition between generator and discriminator
+Typical use	Representation learning and reconstruction	Synthetic data generation
+
+Although both involve neural networks and can learn from unlabelled data, their objectives and training processes are different.
+
+Topic 6: Reinforcement Learning and Deep Reinforcement Learning
+6.1 Reinforcement Learning
+6.1.1 Definition
+Reinforcement learning (RL) is a learning approach in which an agent learns to make decisions by interacting with an environment and receiving rewards or penalties.
+
+Instead of learning only from examples with correct answers, the agent learns from the consequences of its actions.
+
+For example, a robot learning to navigate a room may receive positive rewards for reaching its destination and negative rewards for collisions.
+6.1.2 Main Components
+* Agent: The learner or decision-maker.
+* Environment: The world in which the agent operates.
+* State: The information describing the current situation.
+* Action: A decision made by the agent.
+* Reward: A numerical signal evaluating an outcome.
+* Policy: A strategy for choosing actions.
+The agent observes the state, selects an action, receives a reward, and observes the next state.
+6.1.3 Cumulative Reward
+The goal is usually to maximise the total reward accumulated over time, not merely the immediate reward from the next action.
+
+A simplified discounted return is:
+\[
+G_t=\sum_{k=0}^{\infty}\gamma^k r_{t+k+1}
+\]
+
+Where:
+* \(G_t\) is the return from time \(t\).
+* \(r_{t+k+1}\) is a future reward.
+* \(\gamma\) is the discount factor, usually between 0 and 1.
+A lower discount factor places more emphasis on immediate rewards. A higher factor places more emphasis on future rewards.
+6.1.4 Exploration and Exploitation
+An RL agent must balance two strategies:
+* Exploration: Trying actions to discover their consequences.
+* Exploitation: Choosing actions that are already known to produce good results.
+Too much exploration can waste time, while too little can prevent the agent from discovering better strategies.
+6.2 Deep Reinforcement Learning
+6.2.1 Definition
+Deep reinforcement learning combines reinforcement learning with deep neural networks.
+
+The neural network can learn representations or approximate decision-making functions when the state or action space is too large for simple tables.
+6.2.2 Example: Deep Q-Networks
+A Deep Q-Network (DQN) uses a neural network to estimate the expected future return associated with taking an action in a particular state.
+
+These estimates are called Q-values.
+
+The agent can use them to select actions that are expected to yield higher cumulative rewards, while also exploring when appropriate.
+6.2.3 Applications and Challenges
+Deep RL has been applied to games, robotics, and certain control problems.
+
+However, it can require substantial interaction data and computation. Training may also be unstable, and performance in simulation may not transfer reliably to the real world.
+
+Topic 7: Limitations, Interpretability, and Responsible AI
+7.1 The Black-Box Problem
+7.1.1 Definition
+A black-box model produces outputs, but its internal reasoning may be difficult for humans to understand.
+
+Deep neural networks can learn complex relationships distributed across many layers and parameters. Consequently, it is often difficult to explain precisely why a particular input produced a particular output.
+7.1.2 Why Interpretability Matters
+Interpretability is important when decisions affect people's lives, such as in healthcare, financial services, and other high-stakes settings.
+
+Understanding a model's behaviour can help identify errors, investigate unexpected predictions, and determine whether the model is relying on inappropriate information.
+7.1.3 Explainable AI
+Explainable AI (XAI) refers to methods that help people understand or investigate model behaviour.
+
+Examples include:
+* Feature importance methods that estimate which inputs influence predictions.
+* Visual explanations that highlight image regions relevant to a prediction.
+* Simplified surrogate models that approximate a more complex model.
+* Counterfactual explanations that explore how changing an input might change the output.
+These methods have limitations. An explanation is not automatically faithful to the model's actual internal computation, so explanations must be evaluated carefully.
+7.2 Bias and Fairness
+7.2.1 Sources of Bias
+AI systems can produce biased results for several reasons:
+* Training data does not adequately represent the population.
+* Historical data reflects existing social inequalities.
+* Labels contain errors or human biases.
+* The selected features or learning objective favour certain outcomes.
+* A model is deployed in a setting that differs from its training environment.
+7.2.2 Consequences
+A model may perform well on average while performing poorly for a particular group.
+
+For example, a speech recognition system might be less accurate for speakers whose accents were underrepresented in the training data.
+7.2.3 Reducing Bias
+Possible approaches include:
+* Evaluating performance across relevant groups.
+* Improving the coverage and quality of training data.
+* Auditing labels, features, and evaluation procedures.
+* Monitoring the model after deployment.
+* Involving relevant stakeholders in the design and assessment process.
+There is no single fairness metric that suits every problem. Different fairness criteria may conflict, so the appropriate approach depends on the application and its consequences.
+7.3 Overfitting and Generalisation
+7.3.1 Overfitting
+Overfitting occurs when a model learns details or noise specific to its training data instead of learning patterns that generalise well.
+
+An overfitted model may perform very well on the training set but poorly on unseen examples.
+7.3.2 Underfitting
+Underfitting occurs when a model is too limited, or has not been trained sufficiently, to capture the important patterns in the data.
+
+It may perform poorly on both the training data and unseen data.
+7.3.3 Generalisation
+Generalisation describes how well a trained model performs on new data drawn from the target setting.
+
+A common way to investigate generalisation is to compare training and validation performance.
+Situation	Training performance	Validation performance	Likely interpretation
+Good fit	Good	Good	The model has learned useful patterns
+Overfitting	Very good	Poorer	The model may have memorised training-specific details
+Underfitting	Poor	Poor	The model may not have learned the important patterns
+
+These are common patterns rather than absolute rules. A reliable assessment also depends on how representative the validation data is.
+7.3.4 Reducing Overfitting
+Common approaches include:
+* Collecting more representative training data.
+* Applying regularisation.
+* Using data augmentation when appropriate.
+* Reducing model complexity.
+* Using early stopping.
+* Evaluating on data that was not used to train or tune the model.
+The aim is not simply to maximise training accuracy, but to build a model that performs reliably on the data it will encounter in practice.
+
+Topic 8: Connecting the Concepts
+8.1 The Complete Neural Network Learning Process
+8.1.1 From Data to Prediction
+A typical supervised neural network training process can be summarised as follows:
+1. The dataset supplies an input.
+2. The network processes it through forward propagation.
+3. The output is compared with the target using a loss function.
+4. Backpropagation calculates the gradients of the loss.
+5. An optimisation algorithm updates the weights and biases.
+6. The process repeats over many examples.
+7. The trained model is evaluated on separate data.
+Each part serves a different purpose. The architecture defines how information is processed, the loss defines what the model is trying to improve, backpropagation calculates gradients, and the optimiser uses those gradients to update parameters.
+8.2 Comparing Learning Approaches
+Approach	Type of feedback	Main objective	Example
+Supervised learning	Labelled target	Predict the correct output	Classifying images
+Semi-supervised learning	Some labelled and much unlabelled data	Improve learning with limited labels	Medical image classification
+Unsupervised learning	No target labels required	Discover structure or representations	Customer clustering
+Reinforcement learning	Rewards from interaction	Maximise cumulative reward	Robot navigation
+Self-supervised learning	Targets constructed from the data itself	Learn useful representations	Predicting masked words in text
+
+Important distinction: Self-supervised learning is not the same as semi-supervised learning. Self-supervised methods create training signals from the data itself, whereas semi-supervised methods combine labelled and unlabelled data.
+8.3 Comparing the Main Architectures
+8.3.1 Architecture Selection
+The main architectures differ in how they represent and process information:
+* MLPs are general-purpose networks for numerical features.
+* CNNs are designed to exploit local spatial patterns.
+* RNNs process sequences using a recurrent hidden state.
+* Transformers use attention to model relationships between sequence elements.
+These categories are not mutually exclusive in all practical systems. Modern models can combine architectural ideas, and the best choice depends on the task.
+8.4 Comparing Generative Models
+8.4.1 Autoencoders and GANs
+An autoencoder learns to reconstruct its input through an encoded representation. A GAN learns to generate samples through competition between a generator and a discriminator.
+
+Both can learn from data without ordinary human-provided class labels, but their objectives differ.
+
+Generative AI includes many other approaches, so these two architectures should be understood as examples rather than a complete list.
+
+Topic 9: Essential Mathematics for Connectionist AI
+9.1 Linear Algebra
+9.1.1 Scalars, Vectors, and Matrices
+Linear algebra provides the language used to represent and calculate with neural network data and parameters.
+* Scalar: A single number.
+* Vector: An ordered collection of numbers.
+* Matrix: A rectangular arrangement of numbers.
+* Tensor: A generalisation of scalars, vectors, and matrices to higher dimensions.
+For example, an image can be represented as a matrix of pixel values for a grayscale image or a three-dimensional array for a colour image.
+9.1.2 Matrix Multiplication
+Neural network layers often calculate weighted combinations of inputs using matrix multiplication.
+
+This makes it possible to process many neuron calculations efficiently in one operation.
+
+What to study: Vectors, matrices, dot products, matrix multiplication, and transposes. Eigenvalues and eigenvectors can be studied later, particularly when learning PCA and more advanced mathematics.
+9.2 Differential Calculus
+9.2.1 Derivatives
+A derivative describes how quickly a function changes with respect to its input.
+
+In machine learning, derivatives help determine how changing a parameter affects a model's loss.
+9.2.2 Partial Derivatives
+A partial derivative measures the change in a function with respect to one variable while the other variables are held constant.
+
+This is important because a neural network's loss depends on many weights and biases.
+9.2.3 Chain Rule and Gradients
+The chain rule makes it possible to calculate derivatives through multiple linked functions. Gradients collect partial derivatives into a vector.
+
+These concepts are essential for understanding backpropagation and gradient-based optimisation.
+
+What to study: Derivatives, partial derivatives, the chain rule, and gradients. Jacobians and Hessians are useful later, but are not prerequisites for understanding the basic training process.
+9.3 Probability and Statistics
+9.3.1 Basic Probability
+Probability provides a mathematical framework for reasoning about uncertainty.
+
+Important concepts include:
+* Probability distributions.
+* Conditional probability.
+* Expected value.
+* Variance.
+* Mean and standard deviation.
+These concepts help explain uncertain predictions, statistical evaluation, and the behaviour of data.
+9.3.2 Probability in Neural Networks
+Some neural network outputs represent probabilities, such as the estimated probability that an image belongs to a particular class.
+
+However, a model's predicted probability is not necessarily well calibrated. A prediction of 0.9 does not automatically mean that the model is correct 90% of the time for all predictions receiving that score.
+9.3.3 Entropy and Cross-Entropy
+Entropy measures uncertainty in a probability distribution. Cross-entropy measures how well one probability distribution represents another and is commonly used in classification losses.
+
+What to study: Basic probability, conditional probability, distributions, expected value, variance, and logarithms. Learn entropy and cross-entropy when studying classification loss functions.
+9.4 Optimisation
+9.4.1 Objective Functions
+An objective function is a mathematical quantity that an optimisation algorithm attempts to minimise or maximise.
+
+In supervised neural network training, the loss function is commonly minimised.
+9.4.2 Gradient-Based Optimisation
+Gradient descent uses gradients to adjust parameters towards lower values of the objective.
+
+Other optimisation algorithms, such as Adam, modify how updates are calculated and are commonly used in deep learning.
+9.4.3 Practical Considerations
+Training depends on choices such as the learning rate, batch size, parameter initialisation, and optimisation algorithm.
+
+Poor choices can cause training to be slow or unstable, even when the architecture is appropriate.
+
+What to study: Objective functions, gradients, gradient descent, learning rates, and the basic idea of stochastic optimisation. Learn Adam and other optimisers after understanding ordinary gradient descent.
+9.5 Reinforcement Learning Mathematics
+9.5.1 Expected Return
+Reinforcement learning evaluates actions partly by their expected future rewards. The discounted return accounts for rewards that arrive at different times.
+9.5.2 Markov Decision Processes
+A Markov decision process (MDP) is a mathematical framework for modelling sequential decisions. It describes states, actions, transition probabilities, and rewards.
+9.5.3 Value Functions
+Value functions estimate the expected return associated with a state or a state-action pair.
+
+They help an agent compare different decisions.
+
+What to study: Expected value, conditional probability, discounted return, states, actions, rewards, and policies. Bellman equations and advanced reinforcement learning algorithms can be learned later.
