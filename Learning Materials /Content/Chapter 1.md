@@ -910,150 +910,167 @@ Where:
 <br/>
 This allows the network to maintain information across a sequence.
 <br/>
+
 #### 4.3.2 Limitations
 Basic RNNs can struggle to learn long-range dependencies because gradients may vanish or grow excessively during training.
 <br/><br/>
 Architectures such as LSTM (Long Short-Term Memory) and GRU (Gated Recurrent Unit) introduce mechanisms that help preserve useful information across longer sequences.
 <br/>
+
 ### 4.4 Transformers
 A Transformer is a neural network architecture that uses attention mechanisms to model relationships between elements in a sequence.
 <br/><br/>
 Transformers are widely used in language models, machine translation, and many other AI applications.
 
-4.4.2 Attention Mechanism
+#### 4.4.1 Attention Mechanism
 Attention allows the network to assign different levels of importance to different elements when computing a representation.
 
 For example, when interpreting a sentence, a model may use information from a distant word to understand the meaning of the current word.
 
 A common attention operation is:
-\[
-\operatorname{Attention}(Q,K,V)
-=
-\operatorname{softmax}
-\left(\frac{QK^T}{\sqrt{d_k}}\right)V
-\]
+
+$Attention(Q,K,V)=softmax\left(\frac{QK^T}{\sqrt{d_k}}\right)V$
 
 Where:
-* \(Q\) represents queries.
-* \(K\) represents keys.
-* \(V\) represents values.
-* \(d_k\) is the dimension of the key vectors.
+* $Q$ represents queries.
+* $K$ represents keys.
+* $V$ represents values.
+* $d_k$ is the dimension of the key vectors.<br/>
+<br/>
 Conceptually, the operation compares queries with keys to determine which values should contribute most to the output.
-
-You do not need to derive this formula in your first introduction to Transformers. Focus first on understanding why attention helps a model use information from different parts of a sequence.
-4.4.3 Positional Information
+<br/>
+> You do not need to derive this formula in your first introduction to Transformers. Focus first on understanding why attention helps a model use information from different parts of a sequence.<br/><br/>
+#### 4.4.2 Positional Information
 Attention alone does not automatically encode the order of a sequence. Transformers therefore use positional information so the model can distinguish between different positions.
+<br/><br/>
+Without positional information or another mechanism that accounts for order, the model would not naturally distinguish many sequences that contain the same elements in different arrangements.<br/><br/>
 
-Without positional information or another mechanism that accounts for order, the model would not naturally distinguish many sequences that contain the same elements in different arrangements.
-4.4.4 Why Transformers Are Important
+#### 4.4.3 Why Transformers Are Important
 Transformers can process sequence elements in parallel during training, unlike the sequential hidden-state updates of a basic RNN.
-
+<br/><br/>
 They can also model relationships between distant elements effectively, although attention can become computationally expensive for very long sequences.
-4.5 Comparing Neural Network Architectures
-Architecture	Main idea	Typical applications
-MLP	Layers of interconnected neurons	Structured data, classification, regression
-CNN	Filters detect local spatial patterns	Image processing
-RNN	Hidden state carries information through a sequence	Sequential data, time series
-Transformer	Attention models relationships between sequence elements	Language models, translation, multimodal AI
+
+### 4.5 Comparing Neural Network Architectures
+
+| Architecture | Main idea | Typical applications |
+| ------------ | --------- | -------------------- |
+| MLP |	Layers of interconnected neurons | Structured data, Classification, and Regression |
+| CNN	Filters | detect local spatial patterns |	Image processing |
+| RNN	Hidden | state carries information through a sequence |	Sequential data, time series |
+|Transformer | Attention models relationships between sequence elements |	Language models, translation, multimodal AI |
+
+<br/>
 
 No architecture is universally best. The appropriate choice depends on the data, task, computational requirements, and training method.
 
-Topic 5: Unsupervised Learning and Generative Models
-5.1 Unsupervised Learning
-5.1.1 Definition
+## Topic 5: Unsupervised Learning and Generative Models
+### 5.1 Unsupervised Learning
 Unsupervised learning attempts to discover patterns or structure in data without relying on labelled target answers.
-
+<br/><br/>
 For example, a system might group customers according to purchasing behaviour without being told in advance which group each customer belongs to.
-5.1.2 Clustering
+<br/><br/>
+#### 5.1.1 Clustering
 Clustering groups data points according to their similarity under a chosen measure.
-
+<br/><br/>
 A common example is K-means clustering, which assigns data points to \(K\) clusters and updates the cluster centres to reduce the distances between points and their assigned centres.
-
+<br/><br/>
 Clustering is useful for exploratory data analysis, but the resulting groups do not automatically correspond to meaningful real-world categories.
-5.1.3 Dimensionality Reduction
+<br/><br/>
+#### 5.1.2 Dimensionality Reduction
 Dimensionality reduction represents data using fewer variables while attempting to preserve useful information.
-
-For example, a dataset with hundreds of measurements may be represented using a smaller number of components to make patterns easier to inspect.
-
+<br/><br/>
+For example, a dataset with hundreds of measurements may be represented using a smaller number of components to make patterns easier to inspect.<br/>
 Principal component analysis (PCA) is a common linear dimensionality-reduction technique.
-5.2 Autoencoders
-5.2.1 Definition
+<br/><br/>
+### 5.2 Autoencoders
 An autoencoder is a neural network trained to reconstruct its input.
-
+<br/>
 It contains two main components:
 * Encoder: Converts the input into a compressed or transformed representation.
 * Decoder: Uses that representation to reconstruct the input.
+<br/><br/>
 The model is trained by comparing the reconstruction with the original input.
-5.2.2 Latent Representation
+<br/><br/>
+#### 5.2.1 Latent Representation
 The encoded representation is often called the latent representation or latent space.
-
+<br/><br/>
 If the representation is constrained appropriately, the network may learn useful features of the input data.
+<br/><br/>
+Autoencoders can be used for dimensionality reduction, feature learning, and certain types of anomaly detection.<br/><br/>
 
-Autoencoders can be used for dimensionality reduction, feature learning, and certain types of anomaly detection.
-5.2.3 Limitations
-A reconstruction that looks accurate does not necessarily mean that the latent representation captures meaningful concepts. The usefulness of the learned representation depends on the architecture, objective, and data.
-5.3 Generative Adversarial Networks
-5.3.1 Definition
+#### 5.2.3 Limitations
+A reconstruction that looks accurate does not necessarily mean that the latent representation captures meaningful concepts. The usefulness of the learned representation depends on the architecture, objective, and data.<br/><br/>
+
+### 5.3 Generative Adversarial Networks
 A generative adversarial network (GAN) contains two neural networks trained in opposition:
 * Generator: Produces synthetic samples.
 * Discriminator: Attempts to distinguish real samples from generated samples.
+<br/><br/>
 The generator attempts to produce samples that the discriminator classifies as real, while the discriminator learns to identify generated samples.
-5.3.2 Adversarial Training
+<br/><br/>
+#### 5.3.1 Adversarial Training
 The two networks improve through a competitive training process.
-
+<br/></br>
 Ideally, the generator learns to produce increasingly realistic samples. In practice, training can be unstable and may fail to represent the full diversity of the training data.
-5.3.3 Applications
-GANs have been used for image generation, image-to-image translation, and data synthesis.
+<br/><br/>
+#### 5.3.2 Applications
+GANs have been used for image generation, image-to-image translation, and data synthesis.<br/>
+They are one family of generative models. Other approaches, including diffusion models and autoregressive models, are also important in modern generative AI.<br/><br/>
 
-They are one family of generative models. Other approaches, including diffusion models and autoregressive models, are also important in modern generative AI.
-5.4 Comparing Autoencoders and GANs
-Feature	Autoencoder	GAN
-Main objective	Reconstruct input data	Generate realistic samples
-Main components	Encoder and decoder	Generator and discriminator
-Training signal	Difference between input and reconstruction	Competition between generator and discriminator
-Typical use	Representation learning and reconstruction	Synthetic data generation
+### 5.4 Comparing Autoencoders and GANs
+| Feature |	Autoencoder	| GAN |
+| ------- | ----------- | ---- |
+| Main objective |	Reconstruct input data | Generate realistic samples |
+| Main components	| Encoder and decoder |	Generator and discriminator |
+| Training signal |	Difference between input and reconstruction	| Competition between generator and discriminator |
+| Typical use |	Representation learning and reconstruction	| Synthetic data generation |
 
+<br/><br/>
 Although both involve neural networks and can learn from unlabelled data, their objectives and training processes are different.
 
-Topic 6: Reinforcement Learning and Deep Reinforcement Learning
-6.1 Reinforcement Learning
-6.1.1 Definition
+## Topic 6: Reinforcement Learning and Deep Reinforcement Learning
+### 6.1 Reinforcement Learning
 Reinforcement learning (RL) is a learning approach in which an agent learns to make decisions by interacting with an environment and receiving rewards or penalties.
-
+<br/><br/>
 Instead of learning only from examples with correct answers, the agent learns from the consequences of its actions.
-
+<br/><br/>
 For example, a robot learning to navigate a room may receive positive rewards for reaching its destination and negative rewards for collisions.
-6.1.2 Main Components
+<br/><br/>
+#### 6.1.1 Main Components
 * Agent: The learner or decision-maker.
 * Environment: The world in which the agent operates.
 * State: The information describing the current situation.
 * Action: A decision made by the agent.
 * Reward: A numerical signal evaluating an outcome.
 * Policy: A strategy for choosing actions.
+<br/><br/>
 The agent observes the state, selects an action, receives a reward, and observes the next state.
-6.1.3 Cumulative Reward
+<br/><br/>
+#### 6.1.2 Cumulative Reward
 The goal is usually to maximise the total reward accumulated over time, not merely the immediate reward from the next action.
-
-A simplified discounted return is:
-\[
-G_t=\sum_{k=0}^{\infty}\gamma^k r_{t+k+1}
-\]
+<br/>
+A simplified discounted return is:<br/>
+$G_t=\sum_{k=0}^{\infty}\gamma^k r_{t+k+1}$
 
 Where:
-* \(G_t\) is the return from time \(t\).
-* \(r_{t+k+1}\) is a future reward.
-* \(\gamma\) is the discount factor, usually between 0 and 1.
+* $G_t$ is the return from time \(t\).
+* $r_{t+k+1}$ is a future reward.
+* $\gamma$ is the discount factor, usually between 0 and 1.
+<br/><br/>
 A lower discount factor places more emphasis on immediate rewards. A higher factor places more emphasis on future rewards.
-6.1.4 Exploration and Exploitation
+<br/><br/>
+#### 6.1.3 Exploration and Exploitation
 An RL agent must balance two strategies:
 * Exploration: Trying actions to discover their consequences.
 * Exploitation: Choosing actions that are already known to produce good results.
+<br/><br/>
 Too much exploration can waste time, while too little can prevent the agent from discovering better strategies.
-6.2 Deep Reinforcement Learning
-6.2.1 Definition
+<br/><br/>
+### 6.2 Deep Reinforcement Learning
 Deep reinforcement learning combines reinforcement learning with deep neural networks.
-
+<br/><br/>
 The neural network can learn representations or approximate decision-making functions when the state or action space is too large for simple tables.
+<br/<br/>
 6.2.2 Example: Deep Q-Networks
 A Deep Q-Network (DQN) uses a neural network to estimate the expected future return associated with taking an action in a particular state.
 
