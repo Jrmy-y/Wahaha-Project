@@ -93,6 +93,7 @@ Algorithm analysis helps estimate how efficiently an algorithm performs as its i
 ---
 
 ### 1.4 Choosing the Right Data Structure
+Common operational requirements and their ideal structural match:
 | Requirement | Possible Choice | Reason |
 | :--- | :--- | :--- |
 | **Frequent access by index** | Array | Constant-time indexed access |
