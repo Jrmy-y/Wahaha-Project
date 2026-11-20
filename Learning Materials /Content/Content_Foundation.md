@@ -293,7 +293,7 @@ Asymptotic analysis allows us to compare algorithms without depending on a speci
 | $O(n!)$ | Factorial |
 
 <!-- IMAGE 04 (optional) · file: big-o-growth-rates.png -->
-![Growth rates of common complexity classes plotted against input size n](PERMALINK_big-o-growth-rates.png)
+![Growth rates of common complexity classes plotted against input size n](https://github.com/Jrmy-y/Wahaha-Project/blob/60591b8fd78617938fa069644b565eb8f10eec98/Assets/Images/big-o-growth-rates.png)
 
 #### Common mistakes
 
@@ -456,7 +456,7 @@ It is naturally represented as a depth-first search tree:
 - A pruned branch is never explored further.
 
 <!-- IMAGE 05 (optional) · file: backtracking-search-tree.png -->
-![Backtracking search tree showing partial assignments, a dead end and a pruned branch](PERMALINK_backtracking-search-tree.png)
+![Backtracking search tree showing partial assignments, a dead end and a pruned branch](https://github.com/Jrmy-y/Wahaha-Project/blob/60591b8fd78617938fa069644b565eb8f10eec98/Assets/Images/backtracking-search-tree.png)
 
 Backtracking is particularly useful for constraint-satisfaction problems, where the objective is to find one or all assignments satisfying a set of conditions.
 
@@ -558,7 +558,7 @@ The two fundamental traversal algorithms are:
 - Depth-first search (DFS).
 
 <!-- IMAGE 06 (optional) · file: bfs-vs-dfs-traversal.png -->
-![Visiting order of breadth-first search compared with depth-first search on the same graph](PERMALINK_bfs-vs-dfs-traversal.png)
+![Visiting order of breadth-first search compared with depth-first search on the same graph](https://github.com/Jrmy-y/Wahaha-Project/blob/60591b8fd78617938fa069644b565eb8f10eec98/Assets/Images/bfs-vs-dfs-traversal.png)
 
 #### Breadth-first search (BFS)
 
@@ -622,7 +622,7 @@ A minimum spanning tree (MST) is a spanning tree with the smallest possible sum 
 An MST minimises the total weight required to connect all vertices. It does not generally minimise the distance from a particular source to every other vertex. That is a shortest-path-tree objective, which is different.
 
 <!-- IMAGE 07 (optional) · file: minimum-spanning-tree-example.png -->
-![A weighted graph with its minimum spanning tree highlighted](PERMALINK_minimum-spanning-tree-example.png)
+![A weighted graph with its minimum spanning tree highlighted](https://github.com/Jrmy-y/Wahaha-Project/blob/60591b8fd78617938fa069644b565eb8f10eec98/Assets/Images/minimum-spanning-tree-example.png)
 
 #### Kruskal's Algorithm
 
@@ -656,7 +656,7 @@ Prim's algorithm must likewise be restarted in each component if a minimum spann
 A flow network is a directed graph in which each edge has a capacity limiting how much flow can pass through it. The network contains a source $s$, which supplies flow, and a sink $t$, which receives it.
 
 <!-- IMAGE 08 (optional) · file: flow-network-example.png -->
-![A flow network with edge capacities, a source s and a sink t](PERMALINK_flow-network-example.png)
+![A flow network with edge capacities, a source s and a sink t](https://github.com/Jrmy-y/Wahaha-Project/blob/60591b8fd78617938fa069644b565eb8f10eec98/Assets/Images/flow-network-example.png)
 
 Flow models include:
 
@@ -808,8 +808,6 @@ Its main parts include:
 - **Axon:** Carries electrical signals away from the cell body.
 - **Synapse:** The junction through which a neuron communicates with another cell.
 
-<!-- IMAGE 09 · file: neuron-diagram.png -->
-![Neuron diagram labelling the dendrites, cell body, axon and synapse](PERMALINK_neuron-diagram.png)
 
 > Biological neurons communicate through complex electrochemical processes while artificial neurons simplify this behaviour into mathematical operations.
 
@@ -863,7 +861,7 @@ Common activation functions include:
   ReLU is widely used in hidden layers because it is simple and often works well in practice.
 
 <!-- IMAGE 10 (optional) · file: activation-functions.png -->
-![Graphs of the step, sigmoid and ReLU activation functions](PERMALINK_activation-functions.png)
+![Graphs of the step, sigmoid and ReLU activation functions](https://github.com/Jrmy-y/Wahaha-Project/blob/60591b8fd78617938fa069644b565eb8f10eec98/Assets/Images/activation-functions.png)
 
 ### 2.3 The Perceptron
 
@@ -872,7 +870,7 @@ A perceptron is one of the simplest artificial neural models. It calculates a we
 For binary classification, its output can be expressed as:
 
 <!-- IMAGE 11 · file: perceptron-binary-output.png -->
-![Perceptron output rule for binary classification](PERMALINK_perceptron-binary-output.png)
+![Perceptron output rule for binary classification](https://github.com/Jrmy-y/Wahaha-Project/blob/60591b8fd78617938fa069644b565eb8f10eec98/Assets/Images/perceptron-binary-output.png)
 
 Here, $\hat{y}$ is the predicted class.
 
@@ -1060,7 +1058,7 @@ The gradient is a vector containing the partial derivatives of a function.
 For the same function:
 
 <!-- IMAGE 12 · file: gradient-of-f.png -->
-![Gradient vector of f(x, y) = x² + 3y](PERMALINK_gradient-of-f.png)
+![Gradient vector of f(x, y) = x² + 3y](https://github.com/Jrmy-y/Wahaha-Project/blob/60591b8fd78617938fa069644b565eb8f10eec98/Assets/Images/gradient-of-f.png)
 
 In neural network training, the gradient tells us how the loss changes with respect to the parameters.
 
@@ -1118,7 +1116,7 @@ A multilayer perceptron (MLP) is a feedforward neural network containing an inpu
 Information flows from the input towards the output without recurrent connections.
 
 <!-- IMAGE 13 (optional) · file: mlp-architecture.png -->
-![Multilayer perceptron with an input layer, hidden layers and an output layer](PERMALINK_mlp-architecture.png)
+![Multilayer perceptron with an input layer, hidden layers and an output layer](https://github.com/Jrmy-y/Wahaha-Project/blob/60591b8fd78617938fa069644b565eb8f10eec98/Assets/Images/mlp-architecture.png)
 
 #### 4.1.1 Structure
 
@@ -1141,7 +1139,7 @@ A convolutional neural network (CNN) is a neural network architecture designed t
 CNNs use filters that examine local regions of an input and learn to detect patterns.
 
 <!-- IMAGE 14 (optional) · file: cnn-architecture.png -->
-![Convolutional neural network with convolution, pooling and output layers](PERMALINK_cnn-architecture.png)
+![Convolutional neural network with convolution, pooling and output layers](https://github.com/Jrmy-y/Wahaha-Project/blob/60591b8fd78617938fa069644b565eb8f10eec98/Assets/Images/cnn-architecture.png)
 
 #### 4.2.1 How Convolution Works
 
@@ -1184,7 +1182,7 @@ Where:
 This allows the network to maintain information across a sequence.
 
 <!-- IMAGE 15 (optional) · file: rnn-unrolled.png -->
-![Recurrent neural network unrolled across time steps with the hidden state passed forward](PERMALINK_rnn-unrolled.png)
+![Recurrent neural network unrolled across time steps with the hidden state passed forward](https://github.com/Jrmy-y/Wahaha-Project/blob/60591b8fd78617938fa069644b565eb8f10eec98/Assets/Images/rnn-unrolled.png)
 
 #### 4.3.2 Limitations
 
@@ -1199,7 +1197,7 @@ A Transformer is a neural network architecture that uses attention mechanisms to
 Transformers are widely used in language models, machine translation, and many other AI applications.
 
 <!-- IMAGE 16 (optional) · file: transformer-architecture.png -->
-![Transformer architecture showing attention layers](PERMALINK_transformer-architecture.png)
+![Transformer architecture showing attention layers](https://github.com/Jrmy-y/Wahaha-Project/blob/60591b8fd78617938fa069644b565eb8f10eec98/Assets/Images/transformer-architecture.png)
 
 #### 4.4.1 Attention Mechanism
 
@@ -1283,7 +1281,7 @@ It contains two main components:
 The model is trained by comparing the reconstruction with the original input.
 
 <!-- IMAGE 17 (optional) · file: autoencoder-architecture.png -->
-![Autoencoder with an encoder, a latent representation and a decoder](PERMALINK_autoencoder-architecture.png)
+![Autoencoder with an encoder, a latent representation and a decoder](https://github.com/Jrmy-y/Wahaha-Project/blob/60591b8fd78617938fa069644b565eb8f10eec98/Assets/Images/autoencoder-architecture.png)
 
 #### 5.2.1 Latent Representation
 
@@ -1307,7 +1305,7 @@ A generative adversarial network (GAN) contains two neural networks trained in o
 The generator attempts to produce samples that the discriminator classifies as real, while the discriminator learns to identify generated samples.
 
 <!-- IMAGE 18 (optional) · file: gan-architecture.png -->
-![GAN showing the generator and discriminator training against each other](PERMALINK_gan-architecture.png)
+![GAN showing the generator and discriminator training against each other](https://github.com/Jrmy-y/Wahaha-Project/blob/60591b8fd78617938fa069644b565eb8f10eec98/Assets/Images/gan-architecture.png)
 
 #### 5.3.1 Adversarial Training
 
@@ -1356,7 +1354,7 @@ For example, a robot learning to navigate a room may receive positive rewards fo
 The agent observes the state, selects an action, receives a reward, and observes the next state.
 
 <!-- IMAGE 19 (optional) · file: rl-agent-environment-loop.png -->
-![Reinforcement learning loop between an agent and its environment: state, action, reward](PERMALINK_rl-agent-environment-loop.png)
+![Reinforcement learning loop between an agent and its environment: state, action, reward](https://github.com/Jrmy-y/Wahaha-Project/blob/60591b8fd78617938fa069644b565eb8f10eec98/Assets/Images/rl-agent-environment-loop.png)
 
 #### 6.1.2 Cumulative Reward
 
@@ -1491,7 +1489,7 @@ A common way to investigate generalisation is to compare training and validation
 These are common patterns rather than absolute rules. A reliable assessment also depends on how representative the validation data is.
 
 <!-- IMAGE 20 (optional) · file: overfitting-vs-underfitting.png -->
-![Underfitting, good fit and overfitting compared through training and validation error](PERMALINK_overfitting-vs-underfitting.png)
+![Underfitting, good fit and overfitting compared through training and validation error](https://github.com/Jrmy-y/Wahaha-Project/blob/60591b8fd78617938fa069644b565eb8f10eec98/Assets/Images/overfitting-vs-underfitting.png)
 
 #### 7.3.4 Reducing Overfitting
 
