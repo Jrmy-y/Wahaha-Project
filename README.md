@@ -24,13 +24,16 @@ This project is tracked on the GitHub Project board: [GitHub Project Board](http
 - Project structure
 - Module planning
 - Chapter draft
-#### In Progress:
-- Finalise the foundational markdown file for the scope of the module
-- First draft of study guide content 
 - First draft of PPT 
 - First draft of video
-#### Not started
+- First draft of study guide content 
 - Add diagrams to other necessary sections
+#### In Progress:
+- Finalise the foundational markdown file for the scope of the module
+- Finalise video
+- Finalise PPT
+- Finalise study guide content
+#### Not started
  
 <br/>
 <br/>
