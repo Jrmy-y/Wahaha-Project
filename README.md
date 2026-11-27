@@ -100,7 +100,7 @@ This project is tracked on the GitHub Project board: [GitHub Project Board](http
 - ### [Video Explanation](https://drive.google.com/drive/folders/1SzCGNO-IMt4bhqDAirwj4WvYaiFIqaPb?usp=sharing)
   The video will help the learners to study subject as many people find it better to study visually rather than reading, this will also help prevent any misconceptions of the subject.
 ---
-- ### [PPT Document]()
+- ### [PPT Document](https://drive.google.com/drive/folders/1Lq0lRUJwWBY8ei81fC-WFSoVpWX0Ipny)
   The PPT document will be the document used to present the subject in class and this can be used by students to review on the subject after class, so during class could solely focus on the explanation in the presentation which will be more productive instead of listening and noting down at the same time.
 ---
 
