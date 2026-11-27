@@ -94,7 +94,7 @@ This project is tracked on the GitHub Project board: [GitHub Project Board](http
 ## Learning Materials
 
 
-- ### [Study Guide](https://github.com/Jrmy-y/Wahaha-Project/tree/4c48305c0828f434aba2b5a0fc3a6c32a8164268/Learning%20Materials%20/Study%20Guide%20)
+- ### [Study Guide](https://github.com/Jrmy-y/Wahaha-Project/tree/897488dc938b3e11328f839f791be3666c2f851f/Study%20guide%20and%20Test%20Bank)
   The study guide will essentially be the textbook for this subject which will be used by the users to recite and learn from. It will include explanations for the topics, examples, and questions for the learners to test their understanding.
 ---
 - ### [Video Explanation](https://drive.google.com/drive/folders/1SzCGNO-IMt4bhqDAirwj4WvYaiFIqaPb?usp=sharing)
